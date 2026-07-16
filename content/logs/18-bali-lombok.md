@@ -58,13 +58,13 @@ We've both been to Bali a few times and so the usual tourist runs did not appeal
 ### Leaving Bali for Nusa Lemboggan
 This is a trip up against the infamous Lombok current, which can flow at up to 6 knots (as we had found out when trying to get to Bali). The trip wasn't too bad, hugging the coast for a bit before crossing, but we saw the oddest eddies and flows in the water and the trip took nearly six hours — and our average boat speed over that time was 6.5knots — so we went through over 30 miles of water to cover 12 miles over ground.
 
-![Nusa Lemboggan by day](/images/L18-Nusa LembonganByDay.jpg)
+![Nusa Lembongan by day](/images/L18-NusaLembByDay.jpg)
 
 At Nusa Lemboggan we met up with Tom once more — he'd been sitting out the winds there — and Tris and Jas who left earlier the same day. It's a strange anchorage — beautifully quiet at night, but during the day, several large party boats come over from Bali and the place is full of Banana Boats and worse — jet skis.
 
 Even so, we spent a couple of days there, enjoying great meals in the pretty deserted restaurants in the evenings before getting ready to head off.
 
-![Nusa Lemboggan by night](/images/L18-Nusa LembonganByNight.jpg)
+![Nusa Lembongan by night](/images/L18-NusaLembByNight.jpg)
 
 And enjoying our first wrapped anchor chain. The seabed at Nusa Lemboggan is a mixture of sand, coral bombs and mushrooms so as you swing around your anchor with the wind and tide, you quietly wrap the chain around the coral. We'd guessed we were caught so Jean had snorkeled out to look at where the chain was going, and had come back with an interesting diagram of where the chain was. A sort of Dada knitting pattern.
 
