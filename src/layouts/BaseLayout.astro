@@ -140,6 +140,18 @@ const structured = jsonLd
 
     <title>{fullTitle}</title>
     <JsonLd data={structured} />
+
+    <!-- Google tag (gtag.js) G-5PYPBP0XX1 -->
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5PYPBP0XX1"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-5PYPBP0XX1');
+    </script>
   </head>
   <body class:list={['min-h-screen flex flex-col antialiased', bodyClass]}>
     <a
