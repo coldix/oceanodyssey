@@ -1,0 +1,284 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Melbourne",
+        "sequence": 9,
+        "slug": "melbourne-queenscliff",
+        "region": "australia",
+        "summary": "Depart RBYC, May 2007"
+      },
+      "geometry": { "type": "Point", "coordinates": [144.9631, -37.8136] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Queenscliff",
+        "sequence": 9,
+        "slug": "melbourne-queenscliff",
+        "region": "australia"
+      },
+      "geometry": { "type": "Point", "coordinates": [144.661, -38.268] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sydney",
+        "sequence": 10,
+        "slug": "queenscliff-sydney",
+        "region": "australia"
+      },
+      "geometry": { "type": "Point", "coordinates": [151.2093, -33.8688] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cairns",
+        "sequence": 11,
+        "slug": "sydney-cairns",
+        "region": "australia"
+      },
+      "geometry": { "type": "Point", "coordinates": [145.7781, -16.9186] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Thursday Island",
+        "sequence": 12,
+        "slug": "cairns-thursday-island",
+        "region": "australia"
+      },
+      "geometry": { "type": "Point", "coordinates": [142.2194, -10.5820] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Darwin",
+        "sequence": 13,
+        "slug": "thursday-island-darwin",
+        "region": "australia",
+        "summary": "Enforced stay — broken ribs"
+      },
+      "geometry": { "type": "Point", "coordinates": [130.8456, -12.4634] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bali",
+        "sequence": 17,
+        "slug": "darwin-bali",
+        "region": "indonesia"
+      },
+      "geometry": { "type": "Point", "coordinates": [115.1889, -8.4095] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lombok",
+        "sequence": 18,
+        "slug": "bali-lombok",
+        "region": "indonesia"
+      },
+      "geometry": { "type": "Point", "coordinates": [116.4572, -8.6500] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kumai",
+        "sequence": 19,
+        "slug": "lombok-kumai",
+        "region": "indonesia",
+        "summary": "Orang-utans of Borneo"
+      },
+      "geometry": { "type": "Point", "coordinates": [111.978, -2.747] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kuching",
+        "sequence": 20,
+        "slug": "kumai-kuching",
+        "region": "borneo"
+      },
+      "geometry": { "type": "Point", "coordinates": [110.3592, 1.5533] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Singapore",
+        "sequence": 21,
+        "slug": "kuching-singapore",
+        "region": "se-asia"
+      },
+      "geometry": { "type": "Point", "coordinates": [103.8198, 1.3521] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Langkawi",
+        "sequence": 22,
+        "slug": "singapore-langkawi",
+        "region": "se-asia"
+      },
+      "geometry": { "type": "Point", "coordinates": [99.8432, 6.3500] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Phuket",
+        "sequence": 23,
+        "slug": "thailand-kings-cup",
+        "region": "se-asia",
+        "summary": "Kings Cup racing"
+      },
+      "geometry": { "type": "Point", "coordinates": [98.3381, 7.8804] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Galle",
+        "sequence": 24,
+        "slug": "phuket-galle",
+        "region": "indian-ocean"
+      },
+      "geometry": { "type": "Point", "coordinates": [80.2200, 6.0329] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Maldives",
+        "sequence": 26,
+        "slug": "galle-salalah",
+        "region": "indian-ocean"
+      },
+      "geometry": { "type": "Point", "coordinates": [73.5090, 4.1755] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Salalah",
+        "sequence": 26,
+        "slug": "galle-salalah",
+        "region": "indian-ocean"
+      },
+      "geometry": { "type": "Point", "coordinates": [54.0924, 17.0151] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Aden",
+        "sequence": 27,
+        "slug": "oman-aden",
+        "region": "aden"
+      },
+      "geometry": { "type": "Point", "coordinates": [45.0367, 12.7855] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Suakin",
+        "sequence": 29,
+        "slug": "red-sea-1",
+        "region": "red-sea"
+      },
+      "geometry": { "type": "Point", "coordinates": [37.337, 19.105] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hurghada",
+        "sequence": 30,
+        "slug": "red-sea-2",
+        "region": "red-sea"
+      },
+      "geometry": { "type": "Point", "coordinates": [33.8116, 27.2579] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Suez / Ismailia",
+        "sequence": 31,
+        "slug": "red-sea-3",
+        "region": "red-sea"
+      },
+      "geometry": { "type": "Point", "coordinates": [32.2723, 30.5965] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cairo",
+        "sequence": 32,
+        "slug": "ismailia-cairo",
+        "region": "med"
+      },
+      "geometry": { "type": "Point", "coordinates": [31.2357, 30.0444] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Turkey",
+        "sequence": 33,
+        "slug": "ismailia-turkey",
+        "region": "med"
+      },
+      "geometry": { "type": "Point", "coordinates": [30.7133, 36.8969] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gibraltar",
+        "sequence": 35,
+        "slug": "turkey-gibraltar",
+        "region": "med",
+        "unfinished": true
+      },
+      "geometry": { "type": "Point", "coordinates": [-5.3536, 36.1408] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ipswich",
+        "sequence": 36,
+        "slug": "gibraltar-ipswich",
+        "region": "atlantic",
+        "unfinished": true
+      },
+      "geometry": { "type": "Point", "coordinates": [1.1482, 52.0567] }
+    }
+  ],
+  "line": {
+    "type": "Feature",
+    "properties": { "name": "Hinewai voyage track" },
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [144.9631, -37.8136],
+        [144.661, -38.268],
+        [151.2093, -33.8688],
+        [145.7781, -16.9186],
+        [142.2194, -10.582],
+        [130.8456, -12.4634],
+        [115.1889, -8.4095],
+        [116.4572, -8.65],
+        [111.978, -2.747],
+        [110.3592, 1.5533],
+        [103.8198, 1.3521],
+        [99.8432, 6.35],
+        [98.3381, 7.8804],
+        [80.22, 6.0329],
+        [73.509, 4.1755],
+        [54.0924, 17.0151],
+        [45.0367, 12.7855],
+        [37.337, 19.105],
+        [33.8116, 27.2579],
+        [32.2723, 30.5965],
+        [31.2357, 30.0444],
+        [30.7133, 36.8969],
+        [-5.3536, 36.1408],
+        [1.1482, 52.0567]
+      ]
+    }
+  }
+}

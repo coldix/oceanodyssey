@@ -1,0 +1,37 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="mt-auto border-t border-navy-900/10 bg-navy-900 text-sand-100 dark:border-white/10 dark:bg-navy-950">
+  <div class="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:px-6 md:grid-cols-3">
+    <div>
+      <p class="font-display text-xl font-semibold">Ocean Odyssey</p>
+      <p class="mt-2 text-sm text-sand-200/80 leading-relaxed">
+        The voyage of <em>Hinewai</em> — words and photographs by Peter Knight and Jean Hutson-Knight.
+      </p>
+    </div>
+    <div>
+      <p class="text-xs font-semibold uppercase tracking-widest text-teal-400">Explore</p>
+      <ul class="mt-3 space-y-2 text-sm">
+        <li><a class="text-sand-100/90 hover:text-white no-underline" href="/voyage/">Voyage log</a></li>
+        <li><a class="text-sand-100/90 hover:text-white no-underline" href="/map/">Route map</a></li>
+        <li><a class="text-sand-100/90 hover:text-white no-underline" href="/gallery/">Gallery</a></li>
+        <li><a class="text-sand-100/90 hover:text-white no-underline" href="/guestbook/">Guestbook</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-xs font-semibold uppercase tracking-widest text-teal-400">Remember</p>
+      <ul class="mt-3 space-y-2 text-sm">
+        <li><a class="text-sand-100/90 hover:text-white no-underline" href="/about/">About this site</a></li>
+        <li><a class="text-sand-100/90 hover:text-white no-underline" href="/people/">Peter &amp; Jean</a></li>
+        <li><a class="text-sand-100/90 hover:text-white no-underline" href="/contact/">Contact</a></li>
+        <li>
+          <a class="text-sand-100/90 hover:text-white no-underline" href="/old/" rel="nofollow">Original website</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-white/10 px-4 py-4 text-center text-xs text-sand-200/60">
+    All original content © 2000–{year} Ocean Odyssey · Rebuilt as a lasting record of the voyage
+  </div>
+</footer>

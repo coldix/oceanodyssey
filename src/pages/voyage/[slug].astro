@@ -1,0 +1,129 @@
+---
+import { render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getAllLogs, getAdjacent } from '../../lib/logs';
+
+export async function getStaticPaths() {
+  const logs = await getAllLogs();
+  return logs.map((log) => ({
+    params: { slug: log.data.slug },
+    props: { log },
+  }));
+}
+
+const { log } = Astro.props;
+const logs = await getAllLogs();
+const { prev, next } = getAdjacent(logs, log);
+const { Content } = await render(log);
+
+const title = `${log.data.title} — Ocean Odyssey`;
+const description = log.data.summary;
+const image = log.data.hero || '/images/HinewaiCairns.jpg';
+---
+
+<BaseLayout title={title} description={description} image={image}>
+  <!-- Article hero -->
+  <header class="relative overflow-hidden bg-navy-900 text-sand-100">
+    {
+      log.data.hero && (
+        <img
+          src={log.data.hero}
+          alt=""
+          class="absolute inset-0 h-full w-full object-cover opacity-40"
+        />
+      )
+    }
+    <div class="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/70 to-navy-950/40"></div>
+    <div class="relative mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20">
+      <a
+        href="/voyage/"
+        class="text-sm font-medium text-teal-400 no-underline hover:underline"
+      >
+        ← All logs
+      </a>
+      <p class="mt-4 text-xs font-semibold uppercase tracking-widest text-teal-400">
+        Chapter {log.data.sequence} · {log.data.regionLabel}
+      </p>
+      <h1 class="mt-3 font-display text-3xl font-semibold leading-tight sm:text-5xl">
+        {log.data.title}
+      </h1>
+      <p class="mt-4 text-lg text-sand-200/85">{log.data.summary}</p>
+      {
+        log.data.places?.length > 0 && (
+          <p class="mt-3 text-sm text-sand-200/60">{log.data.places.join(' · ')}</p>
+        )
+      }
+      {
+        log.data.unfinished && (
+          <p class="mt-6 inline-block rounded-full bg-coral/90 px-3 py-1 text-xs font-semibold uppercase tracking-wide">
+            Narrative unfinished
+          </p>
+        )
+      }
+    </div>
+  </header>
+
+  <article class="mx-auto max-w-3xl px-4 py-12 sm:px-6">
+    <div class="prose-log">
+      <Content />
+    </div>
+
+    <div class="mt-12 flex flex-wrap gap-3 border-t border-navy-900/10 pt-8 dark:border-white/10">
+      <a
+        href="/map/"
+        class="rounded-full border border-navy-900/15 px-4 py-2 text-sm font-medium text-navy-800 no-underline hover:border-teal-600 dark:border-white/15 dark:text-sand-100"
+      >
+        View on map
+      </a>
+      <a
+        href="/guestbook/"
+        class="rounded-full border border-navy-900/15 px-4 py-2 text-sm font-medium text-navy-800 no-underline hover:border-teal-600 dark:border-white/15 dark:text-sand-100"
+      >
+        Leave a memory
+      </a>
+    </div>
+  </article>
+
+  <!-- Prev / next -->
+  <nav
+    class="border-t border-navy-900/10 bg-sand-100/50 dark:border-white/10 dark:bg-navy-900/40"
+    aria-label="Chapter navigation"
+  >
+    <div class="mx-auto grid max-w-6xl gap-4 px-4 py-10 sm:grid-cols-2 sm:px-6">
+      {
+        prev ? (
+          <a
+            href={`/voyage/${prev.data.slug}/`}
+            class="group rounded-2xl border border-navy-900/10 bg-white p-5 no-underline transition hover:border-teal-600 dark:border-white/10 dark:bg-navy-900"
+          >
+            <p class="text-xs font-semibold uppercase tracking-widest text-muted dark:text-sand-200/50">
+              Previous
+            </p>
+            <p class="mt-1 font-display text-lg font-semibold text-navy-900 group-hover:text-teal-600 dark:text-sand-100">
+              {prev.data.title}
+            </p>
+          </a>
+        ) : (
+          <div />
+        )
+      }
+      {
+        next ? (
+          <a
+            href={`/voyage/${next.data.slug}/`}
+            class="group rounded-2xl border border-navy-900/10 bg-white p-5 text-right no-underline transition hover:border-teal-600 dark:border-white/10 dark:bg-navy-900 sm:justify-self-end sm:text-right"
+          >
+            <p class="text-xs font-semibold uppercase tracking-widest text-muted dark:text-sand-200/50">
+              Next
+            </p>
+            <p class="mt-1 font-display text-lg font-semibold text-navy-900 group-hover:text-teal-600 dark:text-sand-100">
+              {next.data.title}
+            </p>
+          </a>
+        ) : (
+          <div />
+        )
+      }
+    </div>
+  </nav>
+</BaseLayout>

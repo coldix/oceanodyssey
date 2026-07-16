@@ -1,0 +1,179 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-display: "Newsreader", "Georgia", "Times New Roman", serif;
+  --font-sans: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+
+  --color-navy-950: #061018;
+  --color-navy-900: #0b1f2a;
+  --color-navy-800: #123040;
+  --color-navy-700: #1a4054;
+  --color-teal-600: #2a8b8b;
+  --color-teal-500: #3aa3a3;
+  --color-teal-400: #5bb8b8;
+  --color-sand-200: #e8dcc8;
+  --color-sand-100: #f3ece0;
+  --color-paper: #f7f4ef;
+  --color-coral: #c45c3e;
+  --color-ink: #1a1f24;
+  --color-muted: #5c6670;
+}
+
+/* Base */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color-paper);
+  color: var(--color-ink);
+  line-height: 1.65;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.dark body,
+html.dark body {
+  background: var(--color-navy-950);
+  color: #e8eef2;
+}
+
+/* Typography helpers */
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Prose for log entries */
+.prose-log {
+  max-width: 42rem;
+  font-size: 1.125rem;
+  line-height: 1.75;
+}
+
+.prose-log p {
+  margin: 1.1em 0;
+}
+
+.prose-log h2,
+.prose-log h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  margin-top: 1.75em;
+  margin-bottom: 0.5em;
+  color: var(--color-navy-900);
+}
+
+.dark .prose-log h2,
+.dark .prose-log h3 {
+  color: var(--color-sand-100);
+}
+
+.prose-log img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin: 1.75rem auto;
+  box-shadow: 0 8px 30px rgb(11 31 42 / 0.12);
+}
+
+.dark .prose-log img {
+  box-shadow: 0 8px 30px rgb(0 0 0 / 0.4);
+}
+
+.prose-log blockquote {
+  border-left: 3px solid var(--color-teal-600);
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  color: var(--color-muted);
+  font-style: italic;
+}
+
+.dark .prose-log blockquote {
+  color: #a8b4be;
+}
+
+.prose-log a {
+  color: var(--color-teal-600);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.dark .prose-log a {
+  color: var(--color-teal-400);
+}
+
+/* Theme pill toggle */
+.theme-pill {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 3.5rem;
+  height: 1.85rem;
+  border-radius: 9999px;
+  background: var(--color-navy-800);
+  border: 1px solid rgb(255 255 255 / 0.12);
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.theme-pill[data-theme="light"] {
+  background: var(--color-sand-200);
+  border-color: rgb(11 31 42 / 0.12);
+}
+
+.theme-pill-knob {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 9999px;
+  background: white;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 0.2);
+  transition: transform 0.2s ease;
+  display: grid;
+  place-items: center;
+  font-size: 0.7rem;
+}
+
+.theme-pill[data-theme="dark"] .theme-pill-knob {
+  transform: translateX(1.55rem);
+  background: var(--color-navy-700);
+  color: #f5e6a8;
+}
+
+.theme-pill[data-theme="light"] .theme-pill-knob {
+  color: #c45c3e;
+}
+
+/* Map container */
+.map-wrap {
+  height: min(70vh, 640px);
+  min-height: 360px;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: 1px solid rgb(11 31 42 / 0.1);
+}
+
+.dark .map-wrap {
+  border-color: rgb(255 255 255 / 0.1);
+}
+
+/* Fade-in */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.6s ease both;
+}

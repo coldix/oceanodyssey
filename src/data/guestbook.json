@@ -1,0 +1,18 @@
+[
+  {
+    "id": "seed-1",
+    "name": "A fellow sailor",
+    "location": "Somewhere at sea",
+    "message": "Fair winds and following seas, Hinewai. What a voyage — and what a record of it.",
+    "date": "2024-01-01",
+    "approved": true
+  },
+  {
+    "id": "seed-2",
+    "name": "Friend of the voyage",
+    "location": "Australia",
+    "message": "Thank you Peter and Jean for sharing the logs over the years. Reading them again is a joy.",
+    "date": "2024-06-15",
+    "approved": true
+  }
+]

@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Contact — Ocean Odyssey"
+  description="Contact the Ocean Odyssey site — memories, photographs, and enquiries welcome."
+>
+  <div class="mx-auto max-w-xl px-4 py-12 sm:px-6">
+    <header>
+      <p class="text-xs font-semibold uppercase tracking-widest text-teal-600 dark:text-teal-400">
+        Get in touch
+      </p>
+      <h1 class="mt-2 font-display text-4xl font-semibold text-navy-900 dark:text-sand-100">
+        Contact
+      </h1>
+      <p class="mt-4 text-lg text-muted dark:text-sand-200/75">
+        For memories of the voyage, photographs, or questions about the site, email is best.
+      </p>
+    </header>
+
+    <div
+      class="mt-10 rounded-2xl border border-navy-900/10 bg-white p-8 dark:border-white/10 dark:bg-navy-900"
+    >
+      <p class="text-sm font-semibold uppercase tracking-widest text-teal-600 dark:text-teal-400">
+        Email
+      </p>
+      <a
+        href="mailto:info@oceanodyssey.net"
+        class="mt-2 block font-display text-2xl text-navy-900 no-underline hover:text-teal-600 dark:text-sand-100 dark:hover:text-teal-400"
+      >
+        info@oceanodyssey.net
+      </a>
+      <p class="mt-6 text-sm text-muted dark:text-sand-200/60">
+        You can also leave a public note in the
+        <a href="/guestbook/" class="text-teal-600 dark:text-teal-400">guestbook</a>.
+      </p>
+    </div>
+  </div>
+</BaseLayout>

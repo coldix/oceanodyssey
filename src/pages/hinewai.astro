@@ -1,0 +1,100 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const photos = [
+  { src: '/images/hinewai.jpg', caption: 'Hinewai — daughter of the water' },
+  { src: '/images/hinhull.jpg', caption: 'Steel hull, built for coral cruising' },
+  { src: '/images/hinbow.jpg', caption: 'Bow' },
+  { src: '/images/hinstern.jpg', caption: 'Stern' },
+  { src: '/images/hingalley.jpg', caption: 'Galley' },
+  { src: '/images/hinsalon.jpg', caption: 'Salon' },
+  { src: '/images/HinewaiCairns.jpg', caption: 'At Cairns' },
+];
+---
+
+<BaseLayout
+  title="Hinewai — Ocean Odyssey"
+  description="Meet Hinewai, a 44-foot Roberts Mauritius steel ketch — strength, safety, and two-handed sailing."
+  image="/images/hinewai.jpg"
+>
+  <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+    <header class="max-w-2xl">
+      <p class="text-xs font-semibold uppercase tracking-widest text-teal-600 dark:text-teal-400">
+        The yacht
+      </p>
+      <h1 class="mt-2 font-display text-4xl font-semibold text-navy-900 dark:text-sand-100 sm:text-5xl">
+        Hinewai
+      </h1>
+      <p class="mt-2 font-display text-xl italic text-muted dark:text-sand-200/70">
+        Daughter of the water
+      </p>
+    </header>
+
+    <div class="mt-10 grid gap-10 lg:grid-cols-2 lg:items-start">
+      <img
+        src="/images/hinewai.jpg"
+        alt="Hinewai under sail or at rest"
+        class="w-full rounded-2xl shadow-xl object-cover aspect-[4/3]"
+      />
+      <div class="prose-log !max-w-none">
+        <p>
+          After two long years of looking, Peter and Jean found their daughter of the water. They
+          scoured brokers’ ads, the internet, and yards across Australia — over fifty yachts —
+          before Hinewai claimed them.
+        </p>
+        <p>
+          Launched in 1985, built of steel in New Zealand by shipbuilding professional Paul
+          Hazelwood, she is based on the proven <strong>Roberts Mauritius</strong> design with a
+          strengthened keel for coral cruising. The key criteria were strength, safety and ease of
+          handling. In Hinewai, those criteria were met.
+        </p>
+      </div>
+    </div>
+
+    <section class="mt-16">
+      <h2 class="font-display text-2xl font-semibold text-navy-900 dark:text-sand-100">
+        Particulars
+      </h2>
+      <dl class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {
+          [
+            ['Length', '44 ft (13.5 m)'],
+            ['Beam', 'Almost 14 ft (4.3 m)'],
+            ['Layout', 'Centre cockpit & pilothouse'],
+            ['Rig', 'Ketch — slab-reefing main, furling headsail, removable inner forestay'],
+            ['Winches', 'Four Australian Arco 52/57 self-tailing'],
+            ['Engine', '78 hp turbo diesel, 500 L bunkers'],
+            ['Electrical', '12 V, 4 × 255 Ah Lifeline AGM + starting battery'],
+            ['Power', 'Engine, solar panels and wind generator'],
+            ['Built', '1985 · Steel · New Zealand'],
+          ].map(([k, v]) => (
+            <div class="rounded-xl border border-navy-900/10 bg-white p-4 dark:border-white/10 dark:bg-navy-900">
+              <dt class="text-xs font-semibold uppercase tracking-widest text-teal-600 dark:text-teal-400">
+                {k}
+              </dt>
+              <dd class="mt-1 text-navy-900 dark:text-sand-100">{v}</dd>
+            </div>
+          ))
+        }
+      </dl>
+    </section>
+
+    <section class="mt-16">
+      <h2 class="font-display text-2xl font-semibold text-navy-900 dark:text-sand-100">
+        Photo essay
+      </h2>
+      <div class="mt-6 columns-2 gap-3 sm:columns-3">
+        {
+          photos.map((p) => (
+            <figure class="mb-3 break-inside-avoid">
+              <img src={p.src} alt={p.caption} class="w-full rounded-lg" loading="lazy" />
+              <figcaption class="mt-1 text-center text-xs text-muted dark:text-sand-200/50">
+                {p.caption}
+              </figcaption>
+            </figure>
+          ))
+        }
+      </div>
+    </section>
+  </div>
+</BaseLayout>

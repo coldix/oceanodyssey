@@ -1,0 +1,131 @@
+---
+import fs from 'node:fs';
+import path from 'node:path';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const publicImages = path.join(process.cwd(), 'public', 'images');
+
+function listJpgs(dir: string, prefix = ''): { src: string; name: string }[] {
+  if (!fs.existsSync(dir)) return [];
+  const out: { src: string; name: string }[] = [];
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    if (entry.name.startsWith('.') || entry.name === '_vti_cnf') continue;
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      // skip nested gallery html trees that are empty of useful structure
+      if (['pages', 'thumbnails'].includes(entry.name)) continue;
+      out.push(...listJpgs(full, `${prefix}${entry.name}/`));
+    } else if (/\.jpe?g$/i.test(entry.name)) {
+      // skip chrome
+      const n = entry.name.toLowerCase();
+      if (n.startsWith('button') || n.startsWith('toppage') || n.startsWith('topofpage')) continue;
+      if (['background.jpg', 'background3.jpg', 'backgroundold.jpg', 'null.gif'].includes(n)) continue;
+      out.push({ src: `/images/${prefix}${entry.name}`, name: entry.name.replace(/\.[^.]+$/, '') });
+    }
+  }
+  return out;
+}
+
+const collections = [
+  {
+    id: 'highlights',
+    title: 'Voyage highlights',
+    description: 'A selection of photographs from the logs — sunsets, harbours, crew and Hinewai herself.',
+    images: [
+      '/images/HinewaiCairns.jpg',
+      '/images/LastSunsetINBassStrait.jpg',
+      '/images/L12Sunset.jpg',
+      '/images/L13SunsetFannieBay.jpg',
+      '/images/L17-ArrivingBenoa.jpg',
+      '/images/L19-Orang3.jpg',
+      '/images/L20-XingEquator1.jpg',
+      '/images/L23-KingsCup.jpg',
+      '/images/L23-Inside The Hong.jpg',
+      '/images/Jean&BassStrait.jpg',
+      '/images/petersun.jpg',
+      '/images/hinewai.jpg',
+    ].filter((src) => fs.existsSync(path.join(process.cwd(), 'public', src.replace(/^\//, '')))),
+  },
+  {
+    id: 'orangutans',
+    title: 'Orang-utans — Kumai',
+    description: 'The forest river and the orang-utans that Jean never forgot.',
+    images: listJpgs(path.join(publicImages, 'Orangutans')).slice(0, 48).map((i) => i.src),
+  },
+  {
+    id: 'aden',
+    title: 'Aden',
+    description: 'Faded glory, qat, and the jump-off into the Red Sea.',
+    images: listJpgs(path.join(publicImages, 'Aden')).slice(0, 48).map((i) => i.src),
+  },
+  {
+    id: 'suakin',
+    title: 'Suakin',
+    description: 'The Red Sea coast — dust, heat and history.',
+    images: listJpgs(path.join(publicImages, 'Suakin')).slice(0, 48).map((i) => i.src),
+  },
+].filter((c) => c.images.length > 0);
+---
+
+<BaseLayout
+  title="Gallery — Ocean Odyssey"
+  description="Photographs from Hinewai’s voyage: orang-utans, Aden, Suakin, Kings Cup and more."
+>
+  <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+    <header class="max-w-2xl">
+      <p class="text-xs font-semibold uppercase tracking-widest text-teal-600 dark:text-teal-400">
+        Photographs
+      </p>
+      <h1 class="mt-2 font-display text-4xl font-semibold text-navy-900 dark:text-sand-100">
+        Gallery
+      </h1>
+      <p class="mt-4 text-lg text-muted dark:text-sand-200/75">
+        Many of these pictures were published at web sizes from the late 2000s. They will improve as
+        we restore key images — for now, they remain the authentic record of the voyage.
+      </p>
+    </header>
+
+    <nav class="mt-8 flex flex-wrap gap-2">
+      {
+        collections.map((c) => (
+          <a
+            href={`#${c.id}`}
+            class="rounded-full border border-navy-900/10 px-3 py-1 text-sm no-underline dark:border-white/15"
+          >
+            {c.title}
+          </a>
+        ))
+      }
+    </nav>
+
+    <div class="mt-14 space-y-16">
+      {
+        collections.map((col) => (
+          <section id={col.id} class="scroll-mt-24">
+            <h2 class="font-display text-2xl font-semibold text-navy-900 dark:text-sand-100">
+              {col.title}
+            </h2>
+            <p class="mt-2 max-w-2xl text-muted dark:text-sand-200/70">{col.description}</p>
+            <div class="mt-6 columns-2 gap-3 sm:columns-3 lg:columns-4">
+              {col.images.map((src) => (
+                <a
+                  href={src}
+                  class="mb-3 block break-inside-avoid overflow-hidden rounded-lg no-underline"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <img
+                    src={src}
+                    alt=""
+                    class="w-full object-cover transition hover:opacity-90"
+                    loading="lazy"
+                  />
+                </a>
+              ))}
+            </div>
+          </section>
+        ))
+      }
+    </div>
+  </div>
+</BaseLayout>
