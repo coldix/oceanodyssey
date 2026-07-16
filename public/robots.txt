@@ -1,0 +1,62 @@
+# Ocean Odyssey v1.0.0
+# Designed by Colin Dixon + Grok · 2026-07-16 AEST (Melbourne)
+# Website by https://oze.au
+#
+# Allow search engines and AI crawlers to index the voyage archive.
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /data/
+Disallow: /old/aspnet_client/
+Disallow: /old/cgi-bin/
+
+# Major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# AI / LLM crawlers (allowed — public memorial archive)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+Sitemap: https://oceanodyssey.net/sitemap-index.xml
+Sitemap: https://oceanodyssey.net/sitemap-0.xml

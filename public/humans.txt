@@ -1,0 +1,15 @@
+/* TEAM */
+Designer: Colin Dixon + Grok
+Site: https://oze.au
+Location: Melbourne, Australia
+
+/* THANKS */
+Original voyage writing & photography: Peter Knight & Jean Hutson-Knight
+Yacht: Hinewai
+
+/* SITE */
+Last update: 2026-07-16
+Language: English (Australian)
+Standards: HTML, CSS, JS
+Software: Astro, Tailwind CSS, MapLibre GL
+Version: 1.0.0

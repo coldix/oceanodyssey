@@ -8,13 +8,26 @@
 import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import JsonLd from '../components/JsonLd.astro';
 import { SITE_VERSION, SITE_DESIGNED_BY, SITE_BUILT, SITE_BY_URL } from '../version';
+import {
+  SITE_NAME,
+  SITE_URL,
+  SITE_LANG,
+  SITE_KEYWORDS,
+  absoluteUrl,
+  websiteJsonLd,
+  organizationJsonLd,
+} from '../lib/seo';
 
 interface Props {
   title?: string;
   description?: string;
   image?: string;
   bodyClass?: string;
+  type?: 'website' | 'article';
+  noindex?: boolean;
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 }
 
 const {
@@ -22,33 +35,74 @@ const {
   description = 'The sailing adventures of Peter Knight and Jean Hutson-Knight aboard Hinewai — a lasting record of their voyage from Melbourne to the Mediterranean and beyond.',
   image = '/images/HinewaiCairns.jpg',
   bodyClass = '',
+  type = 'website',
+  noindex = false,
+  jsonLd,
 } = Astro.props;
 
-const canonical = new URL(Astro.url.pathname, Astro.site);
-const ogImage = image.startsWith('http') ? image : new URL(image, Astro.site).href;
+const canonical = new URL(Astro.url.pathname, Astro.site ?? SITE_URL);
+const ogImage = absoluteUrl(image);
+const fullTitle = title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`;
+const creditComment = `Ocean Odyssey v${SITE_VERSION} | Designed by ${SITE_DESIGNED_BY} | ${SITE_BUILT} | Website by ${SITE_BY_URL}`;
+
+const defaultLd = [websiteJsonLd(), organizationJsonLd()];
+const structured = jsonLd
+  ? Array.isArray(jsonLd)
+    ? [...defaultLd, ...jsonLd]
+    : [...defaultLd, jsonLd]
+  : defaultLd;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={SITE_LANG}>
   <head>
-    <!-- Ocean Odyssey v{SITE_VERSION} | Designed by {SITE_DESIGNED_BY} | {SITE_BUILT} | Website by {SITE_BY_URL} -->
+    <!-- {creditComment} -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={`Ocean Odyssey v${SITE_VERSION} · ${SITE_DESIGNED_BY} · ${SITE_BY_URL}`} />
-    <meta name="author" content={SITE_DESIGNED_BY} />
+    <meta name="author" content="Peter Knight, Jean Hutson-Knight; site by Colin Dixon + Grok" />
     <meta name="description" content={description} />
-    <link rel="canonical" href={canonical} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="keywords" content={SITE_KEYWORDS} />
+    <meta name="robots" content={noindex ? 'noindex,nofollow' : 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1'} />
+    <meta name="googlebot" content={noindex ? 'noindex,nofollow' : 'index,follow'} />
+    <meta name="bingbot" content={noindex ? 'noindex,nofollow' : 'index,follow'} />
+    <meta name="theme-color" content="#0B1F2A" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#F7F4EF" media="(prefers-color-scheme: light)" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="geo.region" content="AU-VIC" />
+    <meta name="geo.placename" content="Melbourne" />
+    <meta name="language" content={SITE_LANG} />
+    <meta name="rating" content="general" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
 
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content={title} />
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt" />
+    <link rel="author" type="text/plain" href="/humans.txt" />
+    <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content={type} />
+    <meta property="og:site_name" content={SITE_NAME} />
+    <meta property="og:locale" content="en_AU" />
+    <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={ogImage} />
+    <meta property="og:image:alt" content="Hinewai and the Ocean Odyssey voyage" />
+
+    <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={title} />
+    <meta name="twitter:title" content={fullTitle} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
+
+    <!-- AI / discovery hints -->
+    <meta name="ai-content-declaration" content="original-human-authored-logs; site-design-assistive" />
+    <link rel="describedby" href="/llms.txt" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -71,7 +125,8 @@ const ogImage = image.startsWith('http') ? image : new URL(image, Astro.site).hr
       })();
     </script>
 
-    <title>{title}</title>
+    <title>{fullTitle}</title>
+    <JsonLd data={structured} />
   </head>
   <body class:list={['min-h-screen flex flex-col antialiased', bodyClass]}>
     <a

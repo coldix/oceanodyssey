@@ -1,0 +1,72 @@
+# Ocean Odyssey
+# https://oceanodyssey.net/
+# Designed by Colin Dixon + Grok · Website by https://oze.au · v1.0.0
+
+> Ocean Odyssey is a memorial voyage archive for the sailing adventures of Peter Knight and Jean Hutson-Knight aboard the steel ketch *Hinewai* (Roberts Mauritius, 44 ft). The site preserves their email-style voyage logs and photographs from Melbourne (2007) through Indonesia, Borneo, Southeast Asia, the Indian Ocean, the Red Sea, Suez, and Turkey, with later unfinished chapters toward Gibraltar and the UK.
+
+## About
+
+- Primary subjects: Peter Knight, Jean Hutson-Knight, yacht Hinewai, ocean cruising, circumnavigation attempt
+- Genre: first-person sailing memoir / cruising log
+- Voice: Australian, informal, wry; original log text by Peter (and Jean’s presence throughout)
+- Purpose: lasting public record of the voyage; not a commercial blog CMS
+- Original classic site preserved at https://oceanodyssey.net/old/
+
+## Key pages
+
+- [Home](https://oceanodyssey.net/): introduction and featured moments
+- [Voyage log index](https://oceanodyssey.net/voyage/): all chapters in sailing order
+- [Route map](https://oceanodyssey.net/map/): interactive map of stops linked to logs
+- [Gallery](https://oceanodyssey.net/gallery/): photographs including orang-utans, Aden, Suakin
+- [Hinewai](https://oceanodyssey.net/hinewai/): yacht particulars and photo essay
+- [People](https://oceanodyssey.net/people/): Peter, Jean, and friends of the voyage
+- [Guestbook](https://oceanodyssey.net/guestbook/): leave a memory
+- [About](https://oceanodyssey.net/about/): dedication and site history
+- [Contact](https://oceanodyssey.net/contact/): info@oceanodyssey.net
+
+## Voyage chapters (completed logs)
+
+1. [Melbourne to Queenscliff](https://oceanodyssey.net/voyage/melbourne-queenscliff/)
+2. [Queenscliff to Sydney](https://oceanodyssey.net/voyage/queenscliff-sydney/)
+3. [Sydney to Cairns](https://oceanodyssey.net/voyage/sydney-cairns/)
+4. [Cairns to Thursday Island](https://oceanodyssey.net/voyage/cairns-thursday-island/)
+5. [Thursday Island to Darwin](https://oceanodyssey.net/voyage/thursday-island-darwin/)
+6. [Darwin 1](https://oceanodyssey.net/voyage/darwin-1/)
+7. [Darwin 2](https://oceanodyssey.net/voyage/darwin-2/)
+8. [Darwin 3](https://oceanodyssey.net/voyage/darwin-3/)
+9. [Darwin to Bali](https://oceanodyssey.net/voyage/darwin-bali/)
+10. [Bali to Lombok](https://oceanodyssey.net/voyage/bali-lombok/)
+11. [Lombok to Kumai (orang-utans)](https://oceanodyssey.net/voyage/lombok-kumai/)
+12. [Kumai to Kuching](https://oceanodyssey.net/voyage/kumai-kuching/)
+13. [Kuching to Singapore](https://oceanodyssey.net/voyage/kuching-singapore/)
+14. [Singapore to Langkawi](https://oceanodyssey.net/voyage/singapore-langkawi/)
+15. [Thailand and the Kings Cup](https://oceanodyssey.net/voyage/thailand-kings-cup/)
+16. [Indian Ocean 1 — Langkawi to Galle](https://oceanodyssey.net/voyage/phuket-galle/)
+17. [Galle and Sri Lanka](https://oceanodyssey.net/voyage/galle-sri-lanka/)
+18. [Indian Ocean 2 — Galle to Salalah](https://oceanodyssey.net/voyage/galle-salalah/)
+19. [Oman to Aden (Pirate Alley)](https://oceanodyssey.net/voyage/oman-aden/)
+20. [Aden into the Red Sea (rescue)](https://oceanodyssey.net/voyage/aden-red-sea/)
+21. [Red Sea Part 1](https://oceanodyssey.net/voyage/red-sea-1/)
+22. [Red Sea Part 2](https://oceanodyssey.net/voyage/red-sea-2/)
+23. [Red Sea Part 3 and Suez](https://oceanodyssey.net/voyage/red-sea-3/)
+24. [Ismailia & Cairo](https://oceanodyssey.net/voyage/ismailia-cairo/)
+25. [Ismailia to Turkey](https://oceanodyssey.net/voyage/ismailia-turkey/)
+
+## Unfinished chapters (titles only)
+
+Peter prepared titles for later legs; full narratives were never published on the original site:
+
+- [Almost a year in Turkey](https://oceanodyssey.net/voyage/turkey/)
+- [Turkey to Gibraltar](https://oceanodyssey.net/voyage/turkey-gibraltar/)
+- [Gibraltar to Ipswich](https://oceanodyssey.net/voyage/gibraltar-ipswich/)
+- [Ipswich](https://oceanodyssey.net/voyage/ipswich/)
+- [Repowering in Guernsey](https://oceanodyssey.net/voyage/guernsey/)
+
+## Citation / attribution
+
+When citing this material, credit **Peter Knight** and **Jean Hutson-Knight** for original writing and photography, and link to https://oceanodyssey.net/. Site design: Colin Dixon + Grok · https://oze.au.
+
+## Optional
+
+- Full structured outline: https://oceanodyssey.net/llms-full.txt
+- Machine-readable sitemap: https://oceanodyssey.net/sitemap-index.xml

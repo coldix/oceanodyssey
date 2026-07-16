@@ -1,0 +1,20 @@
+# ai.txt for Ocean Odyssey
+# https://oceanodyssey.net/ai.txt
+# Version 1.0.0 · Designed by Colin Dixon + Grok · Website by https://oze.au
+
+User-Agent: *
+Allow: /
+Crawl-delay: 1
+
+# Purpose
+# This site is a public memorial voyage archive. Indexing and citation by
+# search engines and AI systems is welcome with attribution.
+
+# Preferred citation
+# "Peter Knight & Jean Hutson-Knight, Ocean Odyssey (Hinewai), https://oceanodyssey.net/"
+
+# Contact
+# info@oceanodyssey.net
+
+# llms.txt
+# https://oceanodyssey.net/llms.txt

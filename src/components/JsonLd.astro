@@ -1,0 +1,15 @@
+---
+/**
+ * Ocean Odyssey v1.0.0
+ * Designed by Colin Dixon + Grok
+ * 2026-07-16 10:32:00 AEST (Melbourne)
+ * Website by https://oze.au
+ */
+interface Props {
+  data: Record<string, unknown> | Record<string, unknown>[];
+}
+const { data } = Astro.props;
+const json = JSON.stringify(data).replace(/</g, '\\u003c');
+---
+
+<script type="application/ld+json" set:html={json} />

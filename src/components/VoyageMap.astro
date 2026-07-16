@@ -1,0 +1,240 @@
+---
+/**
+ * Ocean Odyssey v1.0.0
+ * Designed by Colin Dixon + Grok
+ * 2026-07-16 10:32:00 AEST (Melbourne)
+ * Website by https://oze.au
+ *
+ * Interactive voyage map (MapLibre via CDN — works on static Hostinger host).
+ */
+import route from '../data/route.json';
+
+const stops = route.features.map((f) => ({
+  name: f.properties.name as string,
+  slug: f.properties.slug as string,
+  summary: (f.properties.summary as string) || '',
+  region: f.properties.region as string,
+  unfinished: Boolean(f.properties.unfinished),
+  coords: f.geometry.coordinates as [number, number],
+}));
+
+const line = route.line;
+const payload = JSON.stringify({ stops, line });
+---
+
+<div class="mt-8 grid gap-6 lg:grid-cols-[1fr_320px]">
+  <div
+    id="voyage-map"
+    class="map-wrap bg-navy-900/5 dark:bg-navy-800"
+    role="region"
+    aria-label="Interactive voyage map"
+  >
+    <p id="map-status" class="flex h-full items-center justify-center p-6 text-sm text-muted dark:text-sand-200/60">
+      Loading map…
+    </p>
+  </div>
+
+  <aside
+    class="max-h-[70vh] overflow-y-auto rounded-2xl border border-navy-900/10 bg-white p-4 dark:border-white/10 dark:bg-navy-900"
+  >
+    <p class="text-xs font-semibold uppercase tracking-widest text-muted dark:text-sand-200/50">
+      Stops
+    </p>
+    <ol class="mt-3 space-y-1" id="stop-list">
+      {
+        stops.map((s, i) => (
+          <li>
+            <button
+              type="button"
+              class="stop-btn w-full rounded-lg px-3 py-2 text-left text-sm transition hover:bg-sand-100 dark:hover:bg-navy-800"
+              data-index={String(i)}
+              data-slug={s.slug}
+            >
+              <span class="font-medium text-navy-900 dark:text-sand-100">{s.name}</span>
+              {s.summary && (
+                <span class="mt-0.5 block text-xs text-muted dark:text-sand-200/50">{s.summary}</span>
+              )}
+            </button>
+          </li>
+        ))
+      }
+    </ol>
+  </aside>
+</div>
+
+<script is:inline src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" />
+
+<script is:inline define:vars={{ payload }}>
+  (function () {
+    const data = typeof payload === 'string' ? JSON.parse(payload) : payload;
+    const statusEl = document.getElementById('map-status');
+
+    function showError(msg) {
+      if (statusEl) {
+        statusEl.textContent = msg;
+        statusEl.classList.add('text-coral');
+      }
+      console.error('[Ocean Odyssey map]', msg);
+    }
+
+    function init() {
+      if (!window.maplibregl) {
+        showError('Map library failed to load. Please refresh the page.');
+        return;
+      }
+
+      const maplibregl = window.maplibregl;
+      const container = document.getElementById('voyage-map');
+      if (!container) return;
+
+      if (statusEl) statusEl.remove();
+
+      const map = new maplibregl.Map({
+        container: 'voyage-map',
+        style: {
+          version: 8,
+          sources: {
+            // Carto Voyager — free tiles, no API key, reliable on HTTPS
+            basemap: {
+              type: 'raster',
+              tiles: [
+                'https://a.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}@2x.png',
+                'https://b.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}@2x.png',
+                'https://c.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}@2x.png',
+              ],
+              tileSize: 256,
+              attribution:
+                '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>',
+            },
+          },
+          layers: [{ id: 'basemap', type: 'raster', source: 'basemap' }],
+        },
+        center: [80, 10],
+        zoom: 1.6,
+        attributionControl: true,
+      });
+
+      map.addControl(new maplibregl.NavigationControl({ visualizePitch: false }), 'top-right');
+      map.addControl(new maplibregl.ScaleControl({ maxWidth: 120 }), 'bottom-left');
+
+      map.on('error', function (e) {
+        console.error('[Ocean Odyssey map] map error', e && e.error);
+      });
+
+      map.on('load', function () {
+        map.resize();
+
+        map.addSource('track', {
+          type: 'geojson',
+          data: data.line,
+        });
+
+        map.addLayer({
+          id: 'track-glow',
+          type: 'line',
+          source: 'track',
+          paint: {
+            'line-color': '#2A8B8B',
+            'line-width': 8,
+            'line-opacity': 0.25,
+          },
+        });
+
+        map.addLayer({
+          id: 'track-line',
+          type: 'line',
+          source: 'track',
+          paint: {
+            'line-color': '#2A8B8B',
+            'line-width': 3,
+            'line-opacity': 0.95,
+          },
+        });
+
+        const bounds = new maplibregl.LngLatBounds();
+        const markers = [];
+
+        data.stops.forEach(function (s, i) {
+          bounds.extend(s.coords);
+
+          const el = document.createElement('button');
+          el.type = 'button';
+          el.className = 'map-marker';
+          el.style.cssText =
+            'width:14px;height:14px;border-radius:50%;background:#C45C3E;border:2px solid #fff;' +
+            'box-shadow:0 1px 4px rgba(0,0,0,.35);cursor:pointer;padding:0;display:block;';
+          el.title = s.name;
+          el.setAttribute('aria-label', s.name);
+
+          const popupHtml =
+            '<div style="font-family:system-ui,sans-serif;min-width:140px">' +
+            '<strong style="font-family:Georgia,serif;font-size:15px">' +
+            s.name +
+            '</strong>' +
+            (s.summary
+              ? '<br><span style="font-size:12px;opacity:.75">' + s.summary + '</span>'
+              : '') +
+            '<br><a href="/voyage/' +
+            s.slug +
+            '/" style="font-size:12px;color:#2A8B8B;font-weight:600">Read log →</a></div>';
+
+          const popup = new maplibregl.Popup({ offset: 16, maxWidth: '240px' }).setHTML(popupHtml);
+
+          const marker = new maplibregl.Marker({ element: el })
+            .setLngLat(s.coords)
+            .setPopup(popup)
+            .addTo(map);
+
+          markers.push(marker);
+
+          el.addEventListener('click', function () {
+            map.flyTo({ center: s.coords, zoom: 5, essential: true });
+          });
+        });
+
+        if (!bounds.isEmpty()) {
+          map.fitBounds(bounds, { padding: 56, maxZoom: 4.2, duration: 0 });
+        }
+
+        // Resize after layout settles (grid + fonts)
+        setTimeout(function () {
+          map.resize();
+        }, 100);
+        window.addEventListener('resize', function () {
+          map.resize();
+        });
+
+        document.querySelectorAll('.stop-btn').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            const i = Number(btn.getAttribute('data-index'));
+            const s = data.stops[i];
+            if (!s) return;
+            map.flyTo({ center: s.coords, zoom: 5, essential: true });
+            if (markers[i]) markers[i].togglePopup();
+          });
+        });
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      // MapLibre script may still be loading
+      if (window.maplibregl) init();
+      else {
+        var tries = 0;
+        var t = setInterval(function () {
+          tries++;
+          if (window.maplibregl) {
+            clearInterval(t);
+            init();
+          } else if (tries > 50) {
+            clearInterval(t);
+            showError('Map library timed out. Check your connection and refresh.');
+          }
+        }, 100);
+      }
+    }
+  })();
+</script>

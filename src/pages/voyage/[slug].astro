@@ -1,8 +1,14 @@
 ---
-/** Ocean Odyssey v1.0.0 | Designed by Colin Dixon + Grok | 2026-07-16 10:32:00 AEST (Melbourne) | Website by https://oze.au */
+/**
+ * Ocean Odyssey v1.0.0
+ * Designed by Colin Dixon + Grok
+ * 2026-07-16 10:32:00 AEST (Melbourne)
+ * Website by https://oze.au
+ */
 import { render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getAllLogs, getAdjacent } from '../../lib/logs';
+import { articleJsonLd, breadcrumbJsonLd } from '../../lib/seo';
 
 export async function getStaticPaths() {
   const logs = await getAllLogs();
@@ -20,9 +26,25 @@ const { Content } = await render(log);
 const title = `${log.data.title} — Ocean Odyssey`;
 const description = log.data.summary;
 const image = log.data.hero || '/images/HinewaiCairns.jpg';
+const path = `/voyage/${log.data.slug}/`;
+const jsonLd = [
+  articleJsonLd({
+    title: log.data.title,
+    description,
+    path,
+    image,
+    sequence: log.data.sequence,
+    places: log.data.places,
+  }),
+  breadcrumbJsonLd([
+    { name: 'Home', path: '/' },
+    { name: 'Voyage', path: '/voyage/' },
+    { name: log.data.title, path },
+  ]),
+];
 ---
 
-<BaseLayout title={title} description={description} image={image}>
+<BaseLayout title={title} description={description} image={image} type="article" jsonLd={jsonLd}>
   <!-- Article hero -->
   <header class="relative overflow-hidden bg-navy-900 text-sand-100">
     {

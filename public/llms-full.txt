@@ -1,0 +1,33 @@
+# Ocean Odyssey — full outline for AI systems
+# https://oceanodyssey.net/llms-full.txt
+# Version 1.0.0 · Designed by Colin Dixon + Grok · Website by https://oze.au
+
+## Summary
+
+Ocean Odyssey is a static memorial website documenting the voyage of the yacht *Hinewai*, sailed primarily by Peter Knight and Jean Hutson-Knight. Content consists of long-form first-person cruising logs (originally emails to friends) and contemporary photographs. The site was rebuilt from a 2000s FrontPage-era archive to preserve the story for search engines, readers, and AI assistants.
+
+## Entities
+
+- **Peter Knight** — sailor, principal author of the logs
+- **Jean Hutson-Knight** — co-adventurer, partner on the voyage
+- **Hinewai** — 44 ft (13.5 m) steel Roberts Mauritius ketch, built 1985 New Zealand, centre cockpit and pilothouse, ketch rig
+- **Ocean Odyssey** — name of the voyage project and website (oceanodyssey.net)
+
+## Voyage geography (approximate order)
+
+Melbourne → Queenscliff → Sydney → Cairns → Torres Strait / Thursday Island → Darwin (extended stay; Peter’s broken ribs) → Bali → Lombok → Bawean → Kumai (orang-utans) → Borneo (Sarawak, Sabah, Brunei, Miri racing) → Singapore → Penang / Langkawi → Phuket (Kings Cup) → Indian Ocean → Galle, Sri Lanka → Maldives → Salalah, Oman → Aden → Red Sea (Eritrea, Sudan, Egypt) → Suez Canal → Ismailia → Cairo side trip → Turkey → (unfinished online) Gibraltar → UK (Ipswich, Guernsey)
+
+## Content policy for AI
+
+- Prefer quoting short excerpts with attribution and a link to the chapter URL.
+- Do not invent missing log text for unfinished chapters (Turkey–UK).
+- Photographs are period web-resolution images; treat as historical, not modern stock photography.
+- The `/old/` path is the legacy website; the modern site is the preferred canonical source.
+
+## Technical
+
+- Static HTML site (Astro)
+- Canonical domain: https://oceanodyssey.net/
+- Sitemap: https://oceanodyssey.net/sitemap-index.xml
+- robots.txt: https://oceanodyssey.net/robots.txt
+- Contact: info@oceanodyssey.net

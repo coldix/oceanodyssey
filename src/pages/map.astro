@@ -1,21 +1,18 @@
 ---
-/** Ocean Odyssey v1.0.0 | Designed by Colin Dixon + Grok | 2026-07-16 10:32:00 AEST (Melbourne) | Website by https://oze.au */
+/**
+ * Ocean Odyssey v1.0.0
+ * Designed by Colin Dixon + Grok
+ * 2026-07-16 10:32:00 AEST (Melbourne)
+ * Website by https://oze.au
+ */
 import BaseLayout from '../layouts/BaseLayout.astro';
-import route from '../data/route.json';
-
-const stops = route.features.map((f) => ({
-  name: f.properties.name,
-  slug: f.properties.slug,
-  summary: f.properties.summary || '',
-  region: f.properties.region,
-  unfinished: f.properties.unfinished || false,
-  coords: f.geometry.coordinates as [number, number],
-}));
+import VoyageMap from '../components/VoyageMap.astro';
 ---
 
 <BaseLayout
-  title="The Route — Ocean Odyssey"
-  description="Follow Hinewai’s track from Melbourne through Indonesia, the Indian Ocean, the Red Sea and the Mediterranean."
+  title="The Route — Ocean Odyssey Map | Hinewai’s Sailing Track"
+  description="Interactive map of Hinewai’s voyage from Melbourne through Indonesia, Borneo, the Indian Ocean, the Red Sea and the Mediterranean — with links to each log."
+  image="/images/MapPlanA.jpg"
 >
   <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6">
     <header class="max-w-2xl">
@@ -27,119 +24,11 @@ const stops = route.features.map((f) => ({
       </h1>
       <p class="mt-4 text-lg text-muted dark:text-sand-200/75">
         It is said that the best laid plans of mice and men can come to naught — but you have to
-        start somewhere. For them, that was Melbourne, Australia.
+        start somewhere. For them, that was Melbourne, Australia. Click a stop to fly there, or open
+        the log for that leg of the voyage.
       </p>
     </header>
 
-    <div class="mt-8 grid gap-6 lg:grid-cols-[1fr_320px]">
-      <div id="voyage-map" class="map-wrap" role="region" aria-label="Interactive voyage map"></div>
-
-      <aside class="max-h-[70vh] overflow-y-auto rounded-2xl border border-navy-900/10 bg-white p-4 dark:border-white/10 dark:bg-navy-900">
-        <p class="text-xs font-semibold uppercase tracking-widest text-muted dark:text-sand-200/50">
-          Stops
-        </p>
-        <ol class="mt-3 space-y-1" id="stop-list">
-          {
-            stops.map((s, i) => (
-              <li>
-                <button
-                  type="button"
-                  class="stop-btn w-full rounded-lg px-3 py-2 text-left text-sm transition hover:bg-sand-100 dark:hover:bg-navy-800"
-                  data-index={i}
-                  data-slug={s.slug}
-                >
-                  <span class="font-medium text-navy-900 dark:text-sand-100">{s.name}</span>
-                  {s.summary && (
-                    <span class="mt-0.5 block text-xs text-muted dark:text-sand-200/50">{s.summary}</span>
-                  )}
-                </button>
-              </li>
-            ))
-          }
-        </ol>
-      </aside>
-    </div>
+    <VoyageMap />
   </div>
 </BaseLayout>
-
-<link href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" rel="stylesheet" />
-<script define:vars={{ routeData: route, stops }}>
-  async function initMap() {
-    const maplibregl = (await import('maplibre-gl')).default;
-
-    const map = new maplibregl.Map({
-      container: 'voyage-map',
-      style: {
-        version: 8,
-        sources: {
-          osm: {
-            type: 'raster',
-            tiles: ['https://tile.openstreetmap.org/{z}/{x}/{y}.png'],
-            tileSize: 256,
-            attribution: '© OpenStreetMap',
-          },
-        },
-        layers: [{ id: 'osm', type: 'raster', source: 'osm' }],
-      },
-      center: [80, 10],
-      zoom: 1.8,
-    });
-
-    map.addControl(new maplibregl.NavigationControl(), 'top-right');
-
-    map.on('load', () => {
-      map.addSource('track', {
-        type: 'geojson',
-        data: routeData.line,
-      });
-      map.addLayer({
-        id: 'track-line',
-        type: 'line',
-        source: 'track',
-        paint: {
-          'line-color': '#2A8B8B',
-          'line-width': 3,
-          'line-opacity': 0.85,
-        },
-      });
-
-      const bounds = new maplibregl.LngLatBounds();
-      stops.forEach((s, i) => {
-        bounds.extend(s.coords);
-        const el = document.createElement('button');
-        el.className = 'map-marker';
-        el.style.cssText =
-          'width:14px;height:14px;border-radius:50%;background:#C45C3E;border:2px solid white;box-shadow:0 1px 4px rgba(0,0,0,.35);cursor:pointer;padding:0;';
-        el.title = s.name;
-        el.setAttribute('aria-label', s.name);
-
-        const popup = new maplibregl.Popup({ offset: 16 }).setHTML(
-          `<strong style="font-family:Georgia,serif">${s.name}</strong>` +
-            (s.summary ? `<br><span style="font-size:12px;opacity:.8">${s.summary}</span>` : '') +
-            `<br><a href="/voyage/${s.slug}/" style="font-size:12px;color:#2A8B8B">Read log →</a>`
-        );
-
-        const marker = new maplibregl.Marker({ element: el })
-          .setLngLat(s.coords)
-          .setPopup(popup)
-          .addTo(map);
-
-        el.addEventListener('click', () => {
-          map.flyTo({ center: s.coords, zoom: 5, essential: true });
-        });
-      });
-
-      map.fitBounds(bounds, { padding: 48, maxZoom: 4.5 });
-    });
-
-    document.querySelectorAll('.stop-btn').forEach((btn) => {
-      btn.addEventListener('click', () => {
-        const i = Number(btn.getAttribute('data-index'));
-        const s = stops[i];
-        map.flyTo({ center: s.coords, zoom: 5, essential: true });
-      });
-    });
-  }
-
-  initMap();
-</script>

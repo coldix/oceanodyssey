@@ -51,24 +51,53 @@ html.dark body {
   font-family: var(--font-display);
 }
 
-/* Prose for log entries */
+/* Prose for log entries — long-form reading comfort */
 .prose-log {
-  max-width: 42rem;
+  max-width: 40rem;
   font-size: 1.125rem;
-  line-height: 1.75;
+  line-height: 1.8;
+  letter-spacing: 0.01em;
+}
+
+.prose-log > :first-child {
+  margin-top: 0;
 }
 
 .prose-log p {
-  margin: 1.1em 0;
+  margin: 1.15em 0;
+  text-wrap: pretty;
+}
+
+.prose-log strong {
+  font-weight: 600;
+  color: var(--color-navy-900);
+}
+
+.dark .prose-log strong {
+  color: var(--color-sand-100);
+}
+
+.prose-log em {
+  font-style: italic;
 }
 
 .prose-log h2,
 .prose-log h3 {
   font-family: var(--font-display);
   font-weight: 600;
-  margin-top: 1.75em;
-  margin-bottom: 0.5em;
+  margin-top: 2em;
+  margin-bottom: 0.6em;
+  line-height: 1.25;
   color: var(--color-navy-900);
+  scroll-margin-top: 5rem;
+}
+
+.prose-log h2 {
+  font-size: 1.65rem;
+}
+
+.prose-log h3 {
+  font-size: 1.35rem;
 }
 
 .dark .prose-log h2,
@@ -78,21 +107,24 @@ html.dark body {
 
 .prose-log img {
   display: block;
-  max-width: 100%;
+  max-width: min(100%, 36rem);
+  width: 100%;
   height: auto;
   border-radius: 0.5rem;
-  margin: 1.75rem auto;
+  margin: 2rem auto;
   box-shadow: 0 8px 30px rgb(11 31 42 / 0.12);
+  background: rgb(11 31 42 / 0.04);
 }
 
 .dark .prose-log img {
   box-shadow: 0 8px 30px rgb(0 0 0 / 0.4);
+  background: rgb(255 255 255 / 0.04);
 }
 
 .prose-log blockquote {
   border-left: 3px solid var(--color-teal-600);
-  padding-left: 1rem;
-  margin: 1.5rem 0;
+  padding: 0.25rem 0 0.25rem 1.15rem;
+  margin: 1.75rem 0;
   color: var(--color-muted);
   font-style: italic;
 }
@@ -109,6 +141,27 @@ html.dark body {
 
 .dark .prose-log a {
   color: var(--color-teal-400);
+}
+
+.prose-log ul,
+.prose-log ol {
+  margin: 1.1em 0;
+  padding-left: 1.4rem;
+}
+
+.prose-log li {
+  margin: 0.35em 0;
+}
+
+/* MapLibre popup + container polish */
+.maplibregl-popup-content {
+  border-radius: 0.5rem !important;
+  padding: 0.65rem 0.85rem !important;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.18) !important;
+}
+
+.maplibregl-ctrl-attrib {
+  font-size: 10px !important;
 }
 
 /* Theme pill toggle */
