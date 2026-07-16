@@ -10,6 +10,10 @@
 export const SITE_NAME = 'Ocean Odyssey';
 export const SITE_URL = 'https://oceanodyssey.net';
 export const SITE_LANG = 'en-AU';
+/** Default Open Graph / Twitter share image (1200×630, best practice). */
+export const DEFAULT_OG_IMAGE = '/images/og-default.jpg';
+export const OG_IMAGE_WIDTH = 1200;
+export const OG_IMAGE_HEIGHT = 630;
 export const SITE_KEYWORDS = [
   'Ocean Odyssey',
   'Hinewai',
@@ -97,7 +101,7 @@ export function articleJsonLd(opts: {
     headline: opts.title,
     description: opts.description,
     url: absoluteUrl(opts.path),
-    image: absoluteUrl(opts.image || '/images/HinewaiCairns.jpg'),
+    image: absoluteUrl(DEFAULT_OG_IMAGE),
     inLanguage: SITE_LANG,
     author: [
       { '@type': 'Person', name: 'Peter Knight' },

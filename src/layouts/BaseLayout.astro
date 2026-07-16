@@ -15,6 +15,9 @@ import {
   SITE_URL,
   SITE_LANG,
   SITE_KEYWORDS,
+  DEFAULT_OG_IMAGE,
+  OG_IMAGE_WIDTH,
+  OG_IMAGE_HEIGHT,
   absoluteUrl,
   websiteJsonLd,
   organizationJsonLd,
@@ -28,20 +31,25 @@ interface Props {
   type?: 'website' | 'article';
   noindex?: boolean;
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
+  /** When true, use image as-is for OG even if small (per-page heroes). Default OG card is 1200×630. */
+  usePageImageForOg?: boolean;
 }
 
 const {
   title = 'Ocean Odyssey — Sailing the World aboard Hinewai',
   description = 'The sailing adventures of Peter Knight and Jean Hutson-Knight aboard Hinewai — a lasting record of their voyage from Melbourne to the Mediterranean and beyond.',
-  image = '/images/HinewaiCairns.jpg',
+  image = DEFAULT_OG_IMAGE,
   bodyClass = '',
   type = 'website',
   noindex = false,
   jsonLd,
+  usePageImageForOg = false,
 } = Astro.props;
 
 const canonical = new URL(Astro.url.pathname, Astro.site ?? SITE_URL);
-const ogImage = absoluteUrl(image);
+// Prefer dedicated OG card site-wide; log heroes are often too small for social previews.
+const ogImagePath = usePageImageForOg && image ? image : DEFAULT_OG_IMAGE;
+const ogImage = absoluteUrl(ogImagePath);
 const fullTitle = title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`;
 const creditComment = `Ocean Odyssey v${SITE_VERSION} | Designed by ${SITE_DESIGNED_BY} | ${SITE_BUILT} | Website by ${SITE_BY_URL}`;
 
@@ -92,13 +100,18 @@ const structured = jsonLd
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={ogImage} />
-    <meta property="og:image:alt" content="Hinewai and the Ocean Odyssey voyage" />
+    <meta property="og:image:secure_url" content={ogImage} />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content={String(OG_IMAGE_WIDTH)} />
+    <meta property="og:image:height" content={String(OG_IMAGE_HEIGHT)} />
+    <meta property="og:image:alt" content="Ocean Odyssey — Hinewai sailing memoir, Melbourne to the Mediterranean" />
 
     <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={fullTitle} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image:alt" content="Ocean Odyssey — Hinewai sailing memoir" />
 
     <!-- AI / discovery hints -->
     <meta name="ai-content-declaration" content="original-human-authored-logs; site-design-assistive" />
