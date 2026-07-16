@@ -11,7 +11,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "extract:logs": "node scripts/extract-logs.mjs",
-    "deploy:build": "npm run build"
+    "deploy:build": "npm run build",
+    "deploy": "bash scripts/deploy-hostinger.sh"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",
