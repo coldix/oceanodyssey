@@ -7,7 +7,7 @@ regionLabel: Indian Ocean
 summary: "Customs, exploring, elephants, and waiting for parts."
 places: [Galle, Sri Lanka]
 unfinished: false
-hero: /images/Log25/L25-MarlinRecomend.jpg
+hero: /images/Log25/L25-GalleFortRamparts.jpg
 sourceFile: log25-Galle.html
 version: "1.0.0"
 designedBy: "Colin Dixon + Grok"
@@ -38,7 +38,11 @@ And then there are the good people. Poor Chami — he was mortified that once ag
 
 As we climbed into the van, a large local Sri Lankan came over and thrust a Sim-card in Jean's hand.
 
-![Photograph from the voyage](/images/Log25/L25-MarlinRecomend.jpg)
+![Marlin](/images/Log25/L25-Marlin.jpg)
+
+> **Marlin Yacht Service**  
+> We would thoroughly recommend Marlin to you. We found him honest and helpful, and a very nice bloke as well.  
+> Tel: 0775839541 or 0775455535 · Email: Marlinof_galle@hotmail.com
 
 "Hello, Hello — I'm Marlin" he said through a wide beaming smile. "Any thing you need, anything I can help you with — just ask for me — Marlin"
 

@@ -7,7 +7,7 @@ regionLabel: Red Sea
 summary: "Port Ghalib, Hurghada, X-rays, and cruising the Nile."
 places: [Port Ghalib, Hurghada, Egypt]
 unfinished: false
-hero: "/images/Log30/L30-JohnsDetails%20copy.gif"
+hero: /images/Log30/L30-H-Hinewai.jpg
 sourceFile: log30-TheRedSea2.html
 version: "1.0.0"
 designedBy: "Colin Dixon + Grok"
@@ -20,7 +20,9 @@ Dear all,
 
 *This page is still being worked on so there're a few holes — some words and a background set of photographs. Sorry about that, but hopefully it's still a good read. And the next time you come back, all will be grand!*
 
-![Photograph from the voyage](/images/Log30/L30-JohnsDetails%20copy.gif)
+> While in Egypt, we took a magic tour between Aswan and Luxor. Our guide was Yahia Abdou Ahmed ("John") — he was superb and multi-lingual.  
+> Contact him. Use him. He can organise everything you want.  
+> **Yahia Abdou Ahmed "John"** · Mobile: (002) 012 3006 803 · Email: yahia_abdo@hotmail.com
 
 So where were we? OK, well, our last email ended when we finally arrived in Port Ghalib, Southern Egypt, about 60% of the way up the Red Sea. And were we'relieved to get there after a pretty hard time over the previous few weeks.
 

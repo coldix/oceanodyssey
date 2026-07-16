@@ -79,8 +79,6 @@ It's not been often over the last year or so we have had the chance to sail Hine
 ### Shush! The Secret Island Resort
 Our destination was Gili Gede, a small island mid-way up the west coast of Lombok — we'd heard there was a beautiful sheltered anchorage there with an interesting bar called "Secret Island Resort" (www.secretislandresort.com). Tris and Jas in *Eloise* decided to come over as well while Tom headed north to the Gili's.
 
-![Photograph from the voyage](/images/L18-SIR.jpg)
-
 Secret it certainly is. We weren't quite sure where to go so tried calling up the Bar on VHF Channel 16, the general hailing frequency. No luck. We had a phone number, but the mobile signal was so bad that we couldn't get through. In desperation, Jean tried texting.
 
 ![Secret Island Resort](/images/L18-SecretIsland.jpg)

@@ -197,7 +197,7 @@ But what strikes you is how they move through the trees. These are big heavy ani
 
 Once the feeding was done, we stayed a while and just watched. Some left quickly, but others, especially the females, hunkered down up the trees and kept a weather eye on their youngsters scampering around.
 
-Click here for more pictures of the orang-utans
+More orang-utan photographs are in the [gallery](/gallery/#orangutans).
 
 ![Photograph from the voyage](/images/L19-Rimba2.jpg)
 

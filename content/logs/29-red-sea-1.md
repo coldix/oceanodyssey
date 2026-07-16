@@ -7,7 +7,7 @@ regionLabel: Red Sea
 summary: Working north against weather; interesting places and a little video.
 places: [Red Sea, Eritrea, Sudan]
 unfinished: false
-hero: /images/Log29/L29-GribS.jpg
+hero: /images/Log29/L29-MarsaDudo1.jpg
 sourceFile: log29-TheRedSea1.html
 version: "1.0.0"
 designedBy: "Colin Dixon + Grok"
@@ -186,7 +186,7 @@ As we wandered through the ruins, we'realised that they were not totally deserte
 
 Yet, strangely, the ruins of Suakin had no dark menace of tragedy about them. Maybe it's because their people were not driven out by war or disease, but happily packed up their belongings and headed north to Port Sudan, leaving their old town to slowly be absorbed back into the desert. And that's happening — we'd seen a couple of photographs by a young German diver, Hans Hass, taken in the late 40's — a lot of the town has fallen down since then. A fascinating place to visit.
 
-Click here for more photographs of Suakin
+More photographs of Suakin are in the [gallery](/gallery/#suakin).
 
 ### On to Mahommed Qol and the long waits.
 ![Stuck in traffic](/images/Log29/L29-Sua-Leaving.jpg)

@@ -7,7 +7,7 @@ regionLabel: "Aden & Arabia"
 summary: "Faded glory of Aden, then a mad night rescuing a yacht."
 places: [Aden, Eritrea]
 unfinished: false
-hero: /images/Log28/AdenPics.gif
+hero: /images/Log28/L28-HinewaiAnchored.jpg
 sourceFile: log28-Aden-Rescue.html
 version: "1.0.0"
 designedBy: "Colin Dixon + Grok"
@@ -26,7 +26,7 @@ But before we got here, we had the chance to enjoy Aden for a few days. Well, en
 ### Aden — a diamond that's lost her luster
 We were faced with two problems when we arrived. Our rudder was leaking and Peter's knee was starting to play up. Neither were easy to fix — we couldn't get the parts for the rudder and having seen the outside of an Aden hospital, Peter thought the best thing for his knee was just rest.
 
-![Photograph from the voyage](/images/Log28/AdenPics.gif)
+More photographs from Aden are in the [gallery](/gallery/#aden).
 
 Our first day had been spent sorting out the various paper trails that bureaucracies seem to need, then inviting Bob and Leonie of "Island Fling", with whom we'd become good "Radio friends" during the convoy, over for a drink. By the end of the evening, the girls had decided Bob and I were brothers, separated at birth. With the hangover the next morning, Peter wasn't sure if that was a good thing. Neither was Bob.
 
