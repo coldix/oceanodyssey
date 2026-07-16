@@ -9,6 +9,10 @@ places: [Guernsey]
 unfinished: true
 hero: null
 sourceFile: log38-Repowering in Guernsey.html
+version: "1.0.0"
+designedBy: "Colin Dixon + Grok"
+built: "2026-07-16 10:32:00 AEST (Melbourne)"
+websiteBy: "https://oze.au"
 ---
 
 > This chapter was never finished on the original Ocean Odyssey website.

@@ -9,6 +9,10 @@ places: [Gibraltar, Ipswich]
 unfinished: true
 hero: null
 sourceFile: log36-From Gib to Ipswich.html
+version: "1.0.0"
+designedBy: "Colin Dixon + Grok"
+built: "2026-07-16 10:32:00 AEST (Melbourne)"
+websiteBy: "https://oze.au"
 ---
 
 > This chapter was never finished on the original Ocean Odyssey website.

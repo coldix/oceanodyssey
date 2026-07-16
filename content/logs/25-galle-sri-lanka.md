@@ -9,6 +9,10 @@ places: [Galle, Sri Lanka]
 unfinished: false
 hero: /images/Log25/L25-MarlinRecomend.jpg
 sourceFile: log25-Galle.html
+version: "1.0.0"
+designedBy: "Colin Dixon + Grok"
+built: "2026-07-16 10:32:00 AEST (Melbourne)"
+websiteBy: "https://oze.au"
 ---
 
 **Galle - Corruption and Good Guys (and Elephants) **

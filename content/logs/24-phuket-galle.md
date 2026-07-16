@@ -9,6 +9,10 @@ places: [Langkawi, Galle]
 unfinished: false
 hero: /images/Log24/L24-RoyalPhuket.jpg
 sourceFile: log24-Phuket-Galle.html
+version: "1.0.0"
+designedBy: "Colin Dixon + Grok"
+built: "2026-07-16 10:32:00 AEST (Melbourne)"
+websiteBy: "https://oze.au"
 ---
 
 **On Passage - The Indian Ocean **

@@ -9,6 +9,10 @@ places: [Galle, Maldives, Salalah]
 unfinished: false
 hero: /images/Log26/L26-JeanOnWatch.jpg
 sourceFile: log26-Galle-Sulalah.html
+version: "1.0.0"
+designedBy: "Colin Dixon + Grok"
+built: "2026-07-16 10:32:00 AEST (Melbourne)"
+websiteBy: "https://oze.au"
 ---
 
 **From Galle to Salalah via the Maldives **

@@ -9,6 +9,10 @@ places: [Queenscliff, Sydney]
 unfinished: false
 hero: "/images/Jean&BassStrait.jpg"
 sourceFile: log10-Queenscliffe-sydney.html
+version: "1.0.0"
+designedBy: "Colin Dixon + Grok"
+built: "2026-07-16 10:32:00 AEST (Melbourne)"
+websiteBy: "https://oze.au"
 ---
 
 **From Queenscliffe to Sydney**

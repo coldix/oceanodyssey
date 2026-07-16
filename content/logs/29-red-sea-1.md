@@ -9,6 +9,10 @@ places: [Red Sea, Eritrea, Sudan]
 unfinished: false
 hero: /images/Log29/L29-GribS.jpg
 sourceFile: log29-TheRedSea1.html
+version: "1.0.0"
+designedBy: "Colin Dixon + Grok"
+built: "2026-07-16 10:32:00 AEST (Melbourne)"
+websiteBy: "https://oze.au"
 ---
 
 **From Eritrea to Eygpt**

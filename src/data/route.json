@@ -1,4 +1,10 @@
 {
+  "_meta": {
+    "version": "1.0.0",
+    "designedBy": "Colin Dixon + Grok",
+    "built": "2026-07-16 10:32:00 AEST (Melbourne)",
+    "websiteBy": "https://oze.au"
+  },
   "type": "FeatureCollection",
   "features": [
     {
@@ -10,7 +16,13 @@
         "region": "australia",
         "summary": "Depart RBYC, May 2007"
       },
-      "geometry": { "type": "Point", "coordinates": [144.9631, -37.8136] }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9631,
+          -37.8136
+        ]
+      }
     },
     {
       "type": "Feature",
@@ -20,7 +32,13 @@
         "slug": "melbourne-queenscliff",
         "region": "australia"
       },
-      "geometry": { "type": "Point", "coordinates": [144.661, -38.268] }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.661,
+          -38.268
+        ]
+      }
     },
     {
       "type": "Feature",
@@ -30,7 +48,13 @@
         "slug": "queenscliff-sydney",
         "region": "australia"
       },
-      "geometry": { "type": "Point", "coordinates": [151.2093, -33.8688] }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.2093,
+          -33.8688
+        ]
+      }
     },
     {
       "type": "Feature",
@@ -40,7 +64,13 @@
         "slug": "sydney-cairns",
         "region": "australia"
       },
-      "geometry": { "type": "Point", "coordinates": [145.7781, -16.9186] }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.7781,
+          -16.9186
+        ]
+      }
     },
     {
       "type": "Feature",
@@ -50,7 +80,13 @@
         "slug": "cairns-thursday-island",
         "region": "australia"
       },
-      "geometry": { "type": "Point", "coordinates": [142.2194, -10.5820] }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.2194,
+          -10.582
+        ]
+      }
     },
     {
       "type": "Feature",
@@ -61,7 +97,13 @@
         "region": "australia",
         "summary": "Enforced stay — broken ribs"
       },
-      "geometry": { "type": "Point", "coordinates": [130.8456, -12.4634] }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          130.8456,
+          -12.4634
+        ]
+      }
     },
     {
       "type": "Feature",
@@ -71,7 +113,13 @@
         "slug": "darwin-bali",
         "region": "indonesia"
       },
-      "geometry": { "type": "Point", "coordinates": [115.1889, -8.4095] }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.1889,
+          -8.4095
+        ]
+      }
     },
     {
       "type": "Feature",
@@ -81,7 +129,13 @@
         "slug": "bali-lombok",
         "region": "indonesia"
       },
-      "geometry": { "type": "Point", "coordinates": [116.4572, -8.6500] }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.4572,
+          -8.65
+        ]
+      }
     },
     {
       "type": "Feature",
@@ -92,7 +146,13 @@
         "region": "indonesia",
         "summary": "Orang-utans of Borneo"
       },
-      "geometry": { "type": "Point", "coordinates": [111.978, -2.747] }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.978,
+          -2.747
+        ]
+      }
     },
     {
       "type": "Feature",
@@ -102,7 +162,13 @@
         "slug": "kumai-kuching",
         "region": "borneo"
       },
-      "geometry": { "type": "Point", "coordinates": [110.3592, 1.5533] }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.3592,
+          1.5533
+        ]
+      }
     },
     {
       "type": "Feature",
@@ -112,7 +178,13 @@
         "slug": "kuching-singapore",
         "region": "se-asia"
       },
-      "geometry": { "type": "Point", "coordinates": [103.8198, 1.3521] }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8198,
+          1.3521
+        ]
+      }
     },
     {
       "type": "Feature",
@@ -122,7 +194,13 @@
         "slug": "singapore-langkawi",
         "region": "se-asia"
       },
-      "geometry": { "type": "Point", "coordinates": [99.8432, 6.3500] }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.8432,
+          6.35
+        ]
+      }
     },
     {
       "type": "Feature",
@@ -133,7 +211,13 @@
         "region": "se-asia",
         "summary": "Kings Cup racing"
       },
-      "geometry": { "type": "Point", "coordinates": [98.3381, 7.8804] }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          98.3381,
+          7.8804
+        ]
+      }
     },
     {
       "type": "Feature",
@@ -143,7 +227,13 @@
         "slug": "phuket-galle",
         "region": "indian-ocean"
       },
-      "geometry": { "type": "Point", "coordinates": [80.2200, 6.0329] }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.22,
+          6.0329
+        ]
+      }
     },
     {
       "type": "Feature",
@@ -153,7 +243,13 @@
         "slug": "galle-salalah",
         "region": "indian-ocean"
       },
-      "geometry": { "type": "Point", "coordinates": [73.5090, 4.1755] }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.509,
+          4.1755
+        ]
+      }
     },
     {
       "type": "Feature",
@@ -163,7 +259,13 @@
         "slug": "galle-salalah",
         "region": "indian-ocean"
       },
-      "geometry": { "type": "Point", "coordinates": [54.0924, 17.0151] }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          54.0924,
+          17.0151
+        ]
+      }
     },
     {
       "type": "Feature",
@@ -173,7 +275,13 @@
         "slug": "oman-aden",
         "region": "aden"
       },
-      "geometry": { "type": "Point", "coordinates": [45.0367, 12.7855] }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          45.0367,
+          12.7855
+        ]
+      }
     },
     {
       "type": "Feature",
@@ -183,7 +291,13 @@
         "slug": "red-sea-1",
         "region": "red-sea"
       },
-      "geometry": { "type": "Point", "coordinates": [37.337, 19.105] }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          37.337,
+          19.105
+        ]
+      }
     },
     {
       "type": "Feature",
@@ -193,7 +307,13 @@
         "slug": "red-sea-2",
         "region": "red-sea"
       },
-      "geometry": { "type": "Point", "coordinates": [33.8116, 27.2579] }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.8116,
+          27.2579
+        ]
+      }
     },
     {
       "type": "Feature",
@@ -203,7 +323,13 @@
         "slug": "red-sea-3",
         "region": "red-sea"
       },
-      "geometry": { "type": "Point", "coordinates": [32.2723, 30.5965] }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.2723,
+          30.5965
+        ]
+      }
     },
     {
       "type": "Feature",
@@ -213,7 +339,13 @@
         "slug": "ismailia-cairo",
         "region": "med"
       },
-      "geometry": { "type": "Point", "coordinates": [31.2357, 30.0444] }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.2357,
+          30.0444
+        ]
+      }
     },
     {
       "type": "Feature",
@@ -223,7 +355,13 @@
         "slug": "ismailia-turkey",
         "region": "med"
       },
-      "geometry": { "type": "Point", "coordinates": [30.7133, 36.8969] }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.7133,
+          36.8969
+        ]
+      }
     },
     {
       "type": "Feature",
@@ -234,7 +372,13 @@
         "region": "med",
         "unfinished": true
       },
-      "geometry": { "type": "Point", "coordinates": [-5.3536, 36.1408] }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.3536,
+          36.1408
+        ]
+      }
     },
     {
       "type": "Feature",
@@ -245,39 +389,119 @@
         "region": "atlantic",
         "unfinished": true
       },
-      "geometry": { "type": "Point", "coordinates": [1.1482, 52.0567] }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.1482,
+          52.0567
+        ]
+      }
     }
   ],
   "line": {
     "type": "Feature",
-    "properties": { "name": "Hinewai voyage track" },
+    "properties": {
+      "name": "Hinewai voyage track"
+    },
     "geometry": {
       "type": "LineString",
       "coordinates": [
-        [144.9631, -37.8136],
-        [144.661, -38.268],
-        [151.2093, -33.8688],
-        [145.7781, -16.9186],
-        [142.2194, -10.582],
-        [130.8456, -12.4634],
-        [115.1889, -8.4095],
-        [116.4572, -8.65],
-        [111.978, -2.747],
-        [110.3592, 1.5533],
-        [103.8198, 1.3521],
-        [99.8432, 6.35],
-        [98.3381, 7.8804],
-        [80.22, 6.0329],
-        [73.509, 4.1755],
-        [54.0924, 17.0151],
-        [45.0367, 12.7855],
-        [37.337, 19.105],
-        [33.8116, 27.2579],
-        [32.2723, 30.5965],
-        [31.2357, 30.0444],
-        [30.7133, 36.8969],
-        [-5.3536, 36.1408],
-        [1.1482, 52.0567]
+        [
+          144.9631,
+          -37.8136
+        ],
+        [
+          144.661,
+          -38.268
+        ],
+        [
+          151.2093,
+          -33.8688
+        ],
+        [
+          145.7781,
+          -16.9186
+        ],
+        [
+          142.2194,
+          -10.582
+        ],
+        [
+          130.8456,
+          -12.4634
+        ],
+        [
+          115.1889,
+          -8.4095
+        ],
+        [
+          116.4572,
+          -8.65
+        ],
+        [
+          111.978,
+          -2.747
+        ],
+        [
+          110.3592,
+          1.5533
+        ],
+        [
+          103.8198,
+          1.3521
+        ],
+        [
+          99.8432,
+          6.35
+        ],
+        [
+          98.3381,
+          7.8804
+        ],
+        [
+          80.22,
+          6.0329
+        ],
+        [
+          73.509,
+          4.1755
+        ],
+        [
+          54.0924,
+          17.0151
+        ],
+        [
+          45.0367,
+          12.7855
+        ],
+        [
+          37.337,
+          19.105
+        ],
+        [
+          33.8116,
+          27.2579
+        ],
+        [
+          32.2723,
+          30.5965
+        ],
+        [
+          31.2357,
+          30.0444
+        ],
+        [
+          30.7133,
+          36.8969
+        ],
+        [
+          -5.3536,
+          36.1408
+        ],
+        [
+          1.1482,
+          52.0567
+        ]
       ]
     }
   }

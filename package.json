@@ -26,5 +26,13 @@
   "devDependencies": {
     "node-html-parser": "^9.0.0"
   },
-  "description": "Ocean Odyssey — memorial voyage archive for Hinewai"
+  "description": "Ocean Odyssey — memorial voyage archive for Hinewai",
+  "author": "Colin Dixon + Grok",
+  "homepage": "https://oze.au",
+  "siteMeta": {
+    "designedBy": "Colin Dixon + Grok",
+    "built": "2026-07-16 10:32:00 AEST (Melbourne)",
+    "websiteBy": "https://oze.au",
+    "version": "1.0.0"
+  }
 }

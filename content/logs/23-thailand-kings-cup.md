@@ -9,6 +9,10 @@ places: [Phuket, Thailand]
 unfinished: false
 hero: /images/L23-OnPassage1.jpg
 sourceFile: log23-Thailand.html
+version: "1.0.0"
+designedBy: "Colin Dixon + Grok"
+built: "2026-07-16 10:32:00 AEST (Melbourne)"
+websiteBy: "https://oze.au"
 ---
 
 **Thailand and the King's Cup**

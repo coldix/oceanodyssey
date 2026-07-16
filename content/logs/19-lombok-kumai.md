@@ -9,6 +9,10 @@ places: [Lombok, Bawean, Kumai]
 unfinished: false
 hero: /images/L19-HayStack.jpg
 sourceFile: log19-Lombok-Kumai.html
+version: "1.0.0"
+designedBy: "Colin Dixon + Grok"
+built: "2026-07-16 10:32:00 AEST (Melbourne)"
+websiteBy: "https://oze.au"
 ---
 
 **And the last email ended.**

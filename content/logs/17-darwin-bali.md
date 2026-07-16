@@ -9,6 +9,10 @@ places: [Darwin, Bali, Benoa]
 unfinished: false
 hero: /images/L17-BaliMarina.jpg
 sourceFile: log17-Darwin-Bali.html
+version: "1.0.0"
+designedBy: "Colin Dixon + Grok"
+built: "2026-07-16 10:32:00 AEST (Melbourne)"
+websiteBy: "https://oze.au"
 ---
 
 14th June 2008

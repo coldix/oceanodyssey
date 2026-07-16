@@ -9,6 +9,10 @@ places: [Salalah, Oman, Aden]
 unfinished: false
 hero: /images/Log27/L27-Salalah2.jpg
 sourceFile: log27-Oman-Aden.html
+version: "1.0.0"
+designedBy: "Colin Dixon + Grok"
+built: "2026-07-16 10:32:00 AEST (Melbourne)"
+websiteBy: "https://oze.au"
 ---
 
 **From Oman to Aden - Pirate Alley**

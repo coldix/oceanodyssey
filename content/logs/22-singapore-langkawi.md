@@ -9,6 +9,10 @@ places: [Singapore, Penang, Langkawi]
 unfinished: false
 hero: /images/L22-CarPark.jpg
 sourceFile: log22-Singapore-Langkawi.html
+version: "1.0.0"
+designedBy: "Colin Dixon + Grok"
+built: "2026-07-16 10:32:00 AEST (Melbourne)"
+websiteBy: "https://oze.au"
 ---
 
 **From Singapore to Penang**

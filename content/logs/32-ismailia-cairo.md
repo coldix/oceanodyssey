@@ -9,6 +9,10 @@ places: [Ismailia, Cairo]
 unfinished: false
 hero: /images/Log32/L32-CairoTaxi1.jpg
 sourceFile: "log32-Ismailia&Cairo.html"
+version: "1.0.0"
+designedBy: "Colin Dixon + Grok"
+built: "2026-07-16 10:32:00 AEST (Melbourne)"
+websiteBy: "https://oze.au"
 ---
 
 **Ismailia and Cairo**

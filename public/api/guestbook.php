@@ -1,6 +1,11 @@
 <?php
 /**
- * Ocean Odyssey guestbook API for Hostinger (PHP).
+ * Ocean Odyssey v1.0.0
+ * Designed by Colin Dixon + Grok
+ * 2026-07-16 10:32:00 AEST (Melbourne)
+ * Website by https://oze.au
+ *
+ * Guestbook API for Hostinger (PHP).
  * POST JSON: { name, location?, email?, message }
  * Writes pending entries to ../data/guestbook-pending.json
  * Approved entries can be merged into guestbook.json for static display.

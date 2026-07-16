@@ -9,6 +9,10 @@ places: [Thursday Island, Darwin]
 unfinished: false
 hero: /images/L13JeanHair.jpg
 sourceFile: log13-ThursIs-Darwin.html
+version: "1.0.0"
+designedBy: "Colin Dixon + Grok"
+built: "2026-07-16 10:32:00 AEST (Melbourne)"
+websiteBy: "https://oze.au"
 ---
 
 **From Thursday Island to Darwin**

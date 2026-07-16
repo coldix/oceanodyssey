@@ -9,6 +9,10 @@ places: [Hurghada, Suez, Ismailia]
 unfinished: false
 hero: /images/Log31/L31-HinewaiHurg.jpg
 sourceFile: log31-TheRedSea3.html
+version: "1.0.0"
+designedBy: "Colin Dixon + Grok"
+built: "2026-07-16 10:32:00 AEST (Melbourne)"
+websiteBy: "https://oze.au"
 ---
 
 **The Red Sea - Part 3**

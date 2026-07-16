@@ -9,6 +9,10 @@ places: [Melbourne, Queenscliff]
 unfinished: false
 hero: /images/L9ByeRBYC.jpg
 sourceFile: log9-RBYC-Queenscliffe.html
+version: "1.0.0"
+designedBy: "Colin Dixon + Grok"
+built: "2026-07-16 10:32:00 AEST (Melbourne)"
+websiteBy: "https://oze.au"
 ---
 
 25th May 2007 - written by Peter

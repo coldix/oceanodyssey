@@ -9,6 +9,10 @@ places: [Sydney, Brisbane, Hamilton Island, Cairns]
 unfinished: false
 hero: /images/L1Refuelling.jpg
 sourceFile: log11-Sydney-Cairns.html
+version: "1.0.0"
+designedBy: "Colin Dixon + Grok"
+built: "2026-07-16 10:32:00 AEST (Melbourne)"
+websiteBy: "https://oze.au"
 ---
 
 4th July 2007 - written by Peter

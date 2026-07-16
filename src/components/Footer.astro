@@ -1,4 +1,12 @@
 ---
+/**
+ * Ocean Odyssey v1.0.0
+ * Designed by Colin Dixon + Grok
+ * 2026-07-16 10:32:00 AEST (Melbourne)
+ * Website by https://oze.au
+ */
+import { SITE_VERSION, SITE_BY_URL, SITE_BY_LABEL, SITE_DESIGNED_BY } from '../version';
+
 const year = new Date().getFullYear();
 ---
 
@@ -31,7 +39,20 @@ const year = new Date().getFullYear();
       </ul>
     </div>
   </div>
-  <div class="border-t border-white/10 px-4 py-4 text-center text-xs text-sand-200/60">
-    All original content © 2000–{year} Ocean Odyssey · Rebuilt as a lasting record of the voyage
+  <div class="border-t border-white/10 px-4 py-4 text-center text-xs text-sand-200/60 space-y-1">
+    <p>
+      All original content © 2000–{year} Ocean Odyssey · Rebuilt as a lasting record of the voyage
+    </p>
+    <p>
+      Website by
+      <a
+        href={SITE_BY_URL}
+        class="text-teal-400 hover:text-teal-300 no-underline"
+        target="_blank"
+        rel="noopener noreferrer"
+      >{SITE_BY_LABEL}</a>
+      · Designed by {SITE_DESIGNED_BY}
+      · v{SITE_VERSION}
+    </p>
   </div>
 </footer>

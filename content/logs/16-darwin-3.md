@@ -9,6 +9,10 @@ places: [Darwin]
 unfinished: false
 hero: /images/L16-BuildUp.jpg
 sourceFile: log16-Darwin3.html
+version: "1.0.0"
+designedBy: "Colin Dixon + Grok"
+built: "2026-07-16 10:32:00 AEST (Melbourne)"
+websiteBy: "https://oze.au"
 ---
 
 **Darwin III**

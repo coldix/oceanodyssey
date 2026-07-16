@@ -1,7 +1,14 @@
 ---
+/**
+ * Ocean Odyssey v1.0.0
+ * Designed by Colin Dixon + Grok
+ * 2026-07-16 10:32:00 AEST (Melbourne)
+ * Website by https://oze.au
+ */
 import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import { SITE_VERSION, SITE_DESIGNED_BY, SITE_BUILT, SITE_BY_URL } from '../version';
 
 interface Props {
   title?: string;
@@ -24,9 +31,11 @@ const ogImage = image.startsWith('http') ? image : new URL(image, Astro.site).hr
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Ocean Odyssey v{SITE_VERSION} | Designed by {SITE_DESIGNED_BY} | {SITE_BUILT} | Website by {SITE_BY_URL} -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="generator" content={Astro.generator} />
+    <meta name="generator" content={`Ocean Odyssey v${SITE_VERSION} · ${SITE_DESIGNED_BY} · ${SITE_BY_URL}`} />
+    <meta name="author" content={SITE_DESIGNED_BY} />
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />

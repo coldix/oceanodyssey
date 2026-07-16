@@ -1,3 +1,9 @@
+<!--
+  Ocean Odyssey v1.0.0
+  Designed by Colin Dixon + Grok
+  2026-07-16 10:32:00 AEST (Melbourne)
+  Website by https://oze.au
+-->
 # Ocean Odyssey
 
 A memorial voyage archive for **Peter Knight** and **Jean Hutson-Knight** aboard *Hinewai* — rebuilt from the classic oceanodyssey.net site as a modern static site.

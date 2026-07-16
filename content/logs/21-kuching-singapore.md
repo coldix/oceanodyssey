@@ -9,6 +9,10 @@ places: [Kuching, Tioman, Singapore]
 unfinished: false
 hero: /images/L21-HaulOut.jpg
 sourceFile: log21-Kuching-Singapore.html
+version: "1.0.0"
+designedBy: "Colin Dixon + Grok"
+built: "2026-07-16 10:32:00 AEST (Melbourne)"
+websiteBy: "https://oze.au"
 ---
 
 **From Kuching, Malaysia to Singapore**

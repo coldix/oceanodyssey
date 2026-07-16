@@ -9,6 +9,10 @@ places: [Ismailia, Turkey]
 unfinished: false
 hero: /images/Log33/L33-Is1.jpg
 sourceFile: log33-Ismailia-Turkey.html
+version: "1.0.0"
+designedBy: "Colin Dixon + Grok"
+built: "2026-07-16 10:32:00 AEST (Melbourne)"
+websiteBy: "https://oze.au"
 ---
 
 Dear All,

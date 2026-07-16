@@ -9,6 +9,10 @@ places: [Kumai, Brunei, Miri, Kuching]
 unfinished: false
 hero: /images/L20-KumaiKid.jpg
 sourceFile: log20-Kumai-Kuching.html
+version: "1.0.0"
+designedBy: "Colin Dixon + Grok"
+built: "2026-07-16 10:32:00 AEST (Melbourne)"
+websiteBy: "https://oze.au"
 ---
 
 Greetings All,

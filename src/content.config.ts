@@ -1,3 +1,9 @@
+/**
+ * Ocean Odyssey v1.0.0
+ * Designed by Colin Dixon + Grok
+ * 2026-07-16 10:32:00 AEST (Melbourne)
+ * Website by https://oze.au
+ */
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
 
@@ -14,6 +20,10 @@ const logs = defineCollection({
     unfinished: z.boolean().default(false),
     hero: z.string().nullable().optional(),
     sourceFile: z.string().optional(),
+    version: z.string().optional(),
+    designedBy: z.string().optional(),
+    built: z.string().optional(),
+    websiteBy: z.string().optional(),
   }),
 });
 

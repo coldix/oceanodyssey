@@ -9,6 +9,10 @@ places: [Aden, Eritrea]
 unfinished: false
 hero: /images/Log28/AdenPics.gif
 sourceFile: log28-Aden-Rescue.html
+version: "1.0.0"
+designedBy: "Colin Dixon + Grok"
+built: "2026-07-16 10:32:00 AEST (Melbourne)"
+websiteBy: "https://oze.au"
 ---
 
 **From Aden - with an unexpected divert**

@@ -9,6 +9,10 @@ places: [Bali, Lombok, Nusa Lembongan]
 unfinished: false
 hero: /images/L18-PropOffAtLast.jpg
 sourceFile: log18-Bali-Lombok.html
+version: "1.0.0"
+designedBy: "Colin Dixon + Grok"
+built: "2026-07-16 10:32:00 AEST (Melbourne)"
+websiteBy: "https://oze.au"
 ---
 
 Greetings to all from Hinewai, currently anchored off Teluk Naruh, a small bay to the north of Lombok (well, as it was when we started this  now being sent from the little island of Labuan off the north west coast of Borneo)..

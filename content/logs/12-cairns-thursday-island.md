@@ -9,6 +9,10 @@ places: [Cairns, Cape York, Thursday Island]
 unfinished: false
 hero: /images/L12CairnsGoose.jpg
 sourceFile: log12-Carins-ThursdayIs.html
+version: "1.0.0"
+designedBy: "Colin Dixon + Grok"
+built: "2026-07-16 10:32:00 AEST (Melbourne)"
+websiteBy: "https://oze.au"
 ---
 
 **From Cairns to Thursday Island**
