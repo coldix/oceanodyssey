@@ -39,3 +39,8 @@ public/data/guestbook-pending.json
 legacy/aspnet_client/**
 legacy/cgi-bin/**
 scripts/upscale-candidates.txt
+
+# Local drop zone for AI-enhanced masters (before pipeline)
+/HinewaiCairns.jpg
+/L28-Party1.jpg
+/*.enhanced.jpg

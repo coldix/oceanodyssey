@@ -28,3 +28,11 @@ npm run build                    # runs optimise then astro build
 - UI chrome (button GIFs, backgrounds) is skipped.
 - Do not delete JPEGs; they are fallbacks and masters.
 - Regenerating after replacing a JPEG: re-run optimise (mtime-based skip).
+
+## AI-enhanced masters
+
+Full-resolution improved photos live in `public/images/enhanced/*-full.jpg`.
+
+Web delivery files (max ~2000px long edge + WebP) replace the matching paths under `public/images/`.
+
+Drop new improved JPGs in the project root with the **same filename** as the site asset (e.g. `HinewaiCairns.jpg`, `L28-Party1.jpg`), then ask to “make them live” or run a similar sharp pipeline.
