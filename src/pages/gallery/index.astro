@@ -3,6 +3,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Picture from '../../components/Picture.astro';
 
 const publicImages = path.join(process.cwd(), 'public', 'images');
 
@@ -115,7 +116,7 @@ const collections = [
                   target="_blank"
                   rel="noopener"
                 >
-                  <img
+                  <Picture
                     src={src}
                     alt=""
                     class="w-full object-cover transition hover:opacity-90"

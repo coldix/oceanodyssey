@@ -2,6 +2,7 @@
 /** Ocean Odyssey v1.0.0 | Designed by Colin Dixon + Grok | 2026-07-16 10:32:00 AEST (Melbourne) | Website by https://oze.au */
 import BaseLayout from '../layouts/BaseLayout.astro';
 import LogCard from '../components/LogCard.astro';
+import Picture from '../components/Picture.astro';
 import { getAllLogs, REGIONS } from '../lib/logs';
 
 const logs = await getAllLogs();
@@ -18,10 +19,11 @@ const heroImage = '/images/HinewaiCairns.jpg';
 >
   <!-- Hero -->
   <section class="relative min-h-[78vh] flex items-end overflow-hidden">
-    <img
+    <Picture
       src={heroImage}
       alt="Hinewai at anchor"
       class="absolute inset-0 h-full w-full object-cover"
+      loading="eager"
       fetchpriority="high"
     />
     <div class="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/55 to-navy-950/25"></div>
@@ -88,7 +90,7 @@ const heroImage = '/images/HinewaiCairns.jpg';
         </p>
       </div>
       <div class="relative">
-        <img
+        <Picture
           src="/images/LastSunsetINBassStrait.jpg"
           alt="Sunset in Bass Strait"
           class="rounded-2xl shadow-xl object-cover w-full aspect-[4/3]"

@@ -7,15 +7,17 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "node scripts/optimise-images.mjs && astro build",
     "preview": "astro preview",
     "astro": "astro",
     "extract:logs": "node scripts/extract-logs.mjs",
     "deploy:build": "npm run build",
     "deploy": "bash scripts/deploy-hostinger.sh",
-    "generate:og": "node scripts/generate-og.mjs"
+    "generate:og": "node scripts/generate-og.mjs",
+    "optimise:images": "node scripts/optimise-images.mjs"
   },
   "dependencies": {
+    "@astrojs/markdown-remark": "^7.2.1",
     "@astrojs/sitemap": "^3.7.3",
     "@tailwindcss/vite": "^4.3.2",
     "astro": "^7.0.9",
@@ -23,9 +25,11 @@
     "maplibre-gl": "^5.24.0",
     "sharp": "^0.35.3",
     "tailwindcss": "^4.3.2",
+    "unist-util-visit": "^5.1.0",
     "yaml": "^2.9.0"
   },
   "devDependencies": {
+    "@types/hast": "^3.0.5",
     "node-html-parser": "^9.0.0"
   },
   "description": "Ocean Odyssey — memorial voyage archive for Hinewai",

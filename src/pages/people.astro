@@ -1,6 +1,7 @@
 ---
 /** Ocean Odyssey v1.0.0 | Designed by Colin Dixon + Grok | 2026-07-16 10:32:00 AEST (Melbourne) | Website by https://oze.au */
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Picture from '../components/Picture.astro';
 
 const peterBlurb =
   'Peter Knight — sailor, storyteller, and the voice behind the Ocean Odyssey logs. With Jean he prepared Hinewai for years, then wrote home from every leg of the voyage with humour, practicality and an open heart.';
@@ -29,31 +30,31 @@ const jeanBlurb =
 
     <section class="mt-12 grid gap-8 md:grid-cols-2">
       <article class="overflow-hidden rounded-2xl border border-navy-900/10 bg-white dark:border-white/10 dark:bg-navy-900">
-        <img src="/images/pjwedpk.jpg" alt="Peter Knight" class="aspect-[4/5] w-full object-cover" />
+        <Picture src="/images/pjwedpk.jpg" alt="Peter Knight" class="aspect-[4/5] w-full object-cover" loading="eager" />
         <div class="p-6">
           <h2 class="font-display text-2xl font-semibold text-navy-900 dark:text-sand-100">
             Peter Knight
           </h2>
           <p class="mt-3 leading-relaxed text-muted dark:text-sand-200/75">{peterBlurb}</p>
           <div class="mt-4 flex gap-3">
-            <img src="/images/petersitsmile.jpg" alt="" class="h-20 w-16 rounded object-cover" />
-            <img src="/images/petersun.jpg" alt="" class="h-20 w-16 rounded object-cover" />
-            <img src="/images/peterwithbook.jpg" alt="" class="h-20 w-16 rounded object-cover" />
+            <Picture src="/images/petersitsmile.jpg" alt="" class="h-20 w-16 rounded object-cover" loading="lazy" />
+            <Picture src="/images/petersun.jpg" alt="" class="h-20 w-16 rounded object-cover" loading="lazy" />
+            <Picture src="/images/peterwithbook.jpg" alt="" class="h-20 w-16 rounded object-cover" loading="lazy" />
           </div>
         </div>
       </article>
 
       <article class="overflow-hidden rounded-2xl border border-navy-900/10 bg-white dark:border-white/10 dark:bg-navy-900">
-        <img src="/images/pjwedjh.jpg" alt="Jean Hutson-Knight" class="aspect-[4/5] w-full object-cover" />
+        <Picture src="/images/pjwedjh.jpg" alt="Jean Hutson-Knight" class="aspect-[4/5] w-full object-cover" loading="eager" />
         <div class="p-6">
           <h2 class="font-display text-2xl font-semibold text-navy-900 dark:text-sand-100">
             Jean Hutson-Knight
           </h2>
           <p class="mt-3 leading-relaxed text-muted dark:text-sand-200/75">{jeanBlurb}</p>
           <div class="mt-4 flex gap-3">
-            <img src="/images/Jean&BassStrait.jpg" alt="" class="h-20 w-20 rounded object-cover" />
-            <img src="/images/jeandive2.jpg" alt="" class="h-20 w-20 rounded object-cover" />
-            <img src="/images/wetjean3.jpg" alt="" class="h-20 w-20 rounded object-cover" />
+            <Picture src="/images/Jean&BassStrait.jpg" alt="" class="h-20 w-20 rounded object-cover" loading="lazy" />
+            <Picture src="/images/jeandive2.jpg" alt="" class="h-20 w-20 rounded object-cover" loading="lazy" />
+            <Picture src="/images/wetjean3.jpg" alt="" class="h-20 w-20 rounded object-cover" loading="lazy" />
           </div>
         </div>
       </article>
@@ -75,7 +76,7 @@ const jeanBlurb =
             '/images/L22-Simon.jpg',
             '/images/L20-Simon.jpg',
           ].map((src) => (
-            <img src={src} alt="Friends of the voyage" class="aspect-square rounded-xl object-cover" loading="lazy" />
+            <Picture src={src} alt="Friends of the voyage" class="aspect-square rounded-xl object-cover" loading="lazy" />
           ))
         }
       </div>

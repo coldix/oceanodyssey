@@ -7,6 +7,7 @@
  */
 import { render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Picture from '../../components/Picture.astro';
 import { getAllLogs, getAdjacent } from '../../lib/logs';
 import { articleJsonLd, breadcrumbJsonLd } from '../../lib/seo';
 
@@ -49,10 +50,12 @@ const jsonLd = [
   <header class="relative overflow-hidden bg-navy-900 text-sand-100">
     {
       log.data.hero && (
-        <img
+        <Picture
           src={log.data.hero}
           alt=""
           class="absolute inset-0 h-full w-full object-cover opacity-40"
+          loading="eager"
+          fetchpriority="high"
         />
       )
     }

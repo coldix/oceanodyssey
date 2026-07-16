@@ -1,6 +1,7 @@
 ---
 /** Ocean Odyssey v1.0.0 | Designed by Colin Dixon + Grok | 2026-07-16 10:32:00 AEST (Melbourne) | Website by https://oze.au */
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Picture from '../components/Picture.astro';
 
 const photos = [
   { src: '/images/hinewai.jpg', caption: 'Hinewai — daughter of the water' },
@@ -32,10 +33,11 @@ const photos = [
     </header>
 
     <div class="mt-10 grid gap-10 lg:grid-cols-2 lg:items-start">
-      <img
+      <Picture
         src="/images/hinewai.jpg"
         alt="Hinewai under sail or at rest"
         class="w-full rounded-2xl shadow-xl object-cover aspect-[4/3]"
+        loading="eager"
       />
       <div class="prose-log !max-w-none">
         <p>
@@ -88,7 +90,7 @@ const photos = [
         {
           photos.map((p) => (
             <figure class="mb-3 break-inside-avoid">
-              <img src={p.src} alt={p.caption} class="w-full rounded-lg" loading="lazy" />
+              <Picture src={p.src} alt={p.caption} class="w-full rounded-lg" loading="lazy" />
               <figcaption class="mt-1 text-center text-xs text-muted dark:text-sand-200/50">
                 {p.caption}
               </figcaption>

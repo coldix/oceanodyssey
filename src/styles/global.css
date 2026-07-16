@@ -105,6 +105,12 @@ html.dark body {
   color: var(--color-sand-100);
 }
 
+.prose-log picture {
+  display: block;
+  max-width: min(100%, 36rem);
+  margin: 2rem auto;
+}
+
 .prose-log img {
   display: block;
   max-width: min(100%, 36rem);
@@ -114,6 +120,11 @@ html.dark body {
   margin: 2rem auto;
   box-shadow: 0 8px 30px rgb(11 31 42 / 0.12);
   background: rgb(11 31 42 / 0.04);
+}
+
+.prose-log picture img {
+  margin: 0;
+  max-width: 100%;
 }
 
 .dark .prose-log img {
